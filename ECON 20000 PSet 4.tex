@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+
+
+\title{Econ 20000-Problem Set 4}
+\author{Dr. Fulya Ersoy}
+\date{Due: November 1, 2024 Friday}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item (Duality) Suppose that you are given the following indirect utility function: $v(p_x, p_y, m)=ln m-\alpha ln p_x -(1-\alpha) ln p_y$.
+\begin{enumerate}[label=(\alph*)]
+\item What is the interpretation of the indirect utility function?
+\item[] The indirect utility function shows the maximum utility a consumer can achieve under the income constraint $m$ and given prices $p_x,p_y$. Derived the from standard Cobb-Douglas utility function: $U(x,y)=x^\alpha y^{1-\alpha}$, the underlying preferences in this expression state that utility positively and logarithmically depends on $m$ and negatively and logarithmically depends on $p_x,p_y$ with weights $\alpha$ and $1-\alpha$, respectively. Direct utility is homothetic/log.
+\item What is consumer's expenditure function? Hint: Use duality.
+\item[] By duality, we can invert the indirect utility function to solve for $m$: $v(p_x,p_y,m)=u=lnm-\alpha lnp_x-(1-\alpha)lnp_y \Rightarrow lnm=u+\alpha lnp_x+(1-\alpha)lnp_y \Rightarrow m=e(p_x,p_y,u)=e^up_x^\alpha p_y^{1-\alpha}$
+\item Obtain the consumer's Hicksian demand curve for good x and good y.
+\item[] By Shephard's Lemma: $h_x=\frac{\partial e}{\partial p_x}=\alpha e^up_x^{\alpha -1}p_y^{1-\alpha}$, $h_y=\frac{\partial e}{\partial p_y}=(1-\alpha)e^up_x^\alpha p_y^{-\alpha}$.
+\item Find $\eta^*$  (the Lagrange multiplier in the expenditure minimization problem) using the expenditure function. What is its interpretation?
+\item[] $\mathcal{L}=p_xx+p_yy+\eta(u-U(x,y))$.
+\item[] For Cobb-Douglas FOCs, $\eta^*=\frac{1}{MRS}$. By envelope theorem: $\eta^*=\frac{\partial e}{\partial u}=e(p_x,p_y,u)$. Here, the Lagrange multiplier equals the minimum expenditure function, in other words, the marginal increase in $e$ required to raise target $u$ by one unit is equal to $e$.
+\item Find $\lambda^*$ (the Lagrange multiplier in the utility maximization problem) using the indirect utility function. What is its interpretation?
+\item[] $\mathcal{L}=U(x,y)+\lambda(m-p_xx+p_yy)$.
+\item[] Thus, $\lambda^*=\frac{\partial v}{\partial m}=\frac{1}{m}$. $\lambda^*$ equals marginal utility of income ($1/m$) which is consistent with the log utility where extra amounts produce diminishing utilities as $m$ rises.
+ \end{enumerate}
+ \item Calculate the income elasticity from the following Marshallian demand function: $x = \frac{\alpha m}{(\alpha+\beta)p_x}$. What do the sign and magnitude tell you?
+ \item[] $\epsilon_{x,m}=\frac{\partial x}{\partial m}\cdot\frac{m}{x}$, $\frac{\partial x}{\partial m}=\frac{\alpha}{(\alpha+\beta)p_x}$. Substituting $x$ into $\frac{m}{x}$ gives $\frac{\alpha}{(\alpha+\beta)p_x}\cdot\frac{(\alpha+\beta)p_x}{\alpha}=1=\epsilon_{x,m}$. Income elasticity is exactly 1, meaning that good $x$ is unit-income-elastic and a normal good. Demand rises proportionally with income (magnitude) and positive sign indicates normal good. 
+\item Consider the Marshallian demand function: $x = 400 -\frac{1}{2}p_x$
+\begin{enumerate}[label=(\alph*)]
+\item[] Own-price elasticity: $\epsilon_{x,p}=\frac{\partial x}{\partial p_x}\cdot\frac{p_x}{x}$. Here $\frac{\partial x}{\partial p_x}=-\frac{1}{2}$, so $\epsilon_{x,p}=-\frac{1}{2}\cdot\frac{p_x}{x}$.
+\item Calculate the own-price elasticity of demand when $x = 10$. Is the demand elastic or inelastic when $x = 10$?
+\item[] Here $10=400-\frac{1}{2}p_x \Rightarrow p_x=780$. Then $\epsilon_{x,p}=-\frac{1}{2}\cdot\frac{780}{10}=-39$. 
+\item[] Since $|\epsilon|=39 >1$, demand is elastic when $x=10$.
+\item Calculate the own-price elasticity of demand when $x = 390$ Is the demand elastic or inelastic when $x = 390$?
+\item[] Here $390=400-\frac{1}{2}p_x \Rightarrow p_x=20$. Then $\epsilon_{x,p}=-\frac{1}{2}\cdot\frac{20}{390}=-\frac{1}{39}$.
+\item[] Since $|\epsilon|=-\frac{1}{39}<1$, demand is inelastic when $x=390$.
+\item At what point demand is unit elastic (equal to -1)?
+\item[] Suppose $\epsilon_{x,p}=-1=-\frac{1}{2}\cdot\frac{p_x}{x}$, then $\frac{p_x}{x}=2$. Substitute $x=400-\frac{1}{2}p_x \Rightarrow\frac{p_x}{400-\frac{1}{2}p_x}=2$. 
+\item[] Solving for $p_x$: $p_x=2(400-\frac{1}{2}p_x) \Rightarrow p_x=800-p_x \Rightarrow2p_x=800 \Rightarrow p_x=400$.
+\item[] Solving for $x$: $x=400-\frac{1}{2}(400)=200$.
+\item[] Thus, demand is unit elastic at $(p_x,x)=(400,200)$.
+\end{enumerate}
+\item Suppose that Max has preferences for goods 1 and 2 represented by $U(x,y) = xy.$
+\begin{enumerate}[label=(\alph*)]
+\item Write down his utility maximization problem, form the Lagrangian, and find his Marshallian demand functions.
+\item[] $\max_{x,y\geq 0} \ U(x,y)=xy \ \ \text{s.t.} \ \ p_xx+p_yy\leq m$.
+\item[] $\mathcal{L}=xy+\lambda(m-p_xx-p_yy)$, where $\lambda$ is the multiplier on the budget constraint.
+\item[] $\frac{\partial \mathcal{L}}{\partial x}=y-\lambda p_x \Rightarrow y=\lambda p_x$, $\frac{\partial \mathcal{L}}{\partial y}=x-\lambda p_y \Rightarrow x=\lambda p_y$.
+\item[] Plug into budget constraint: $p_x(\lambda p_y)+p_y(\lambda p_x)=m \Rightarrow2\lambda p_xp_y=m \Rightarrow \lambda ^*=\frac{m}{2p_xp_y}$.
+\item[] Thus, $x^*=\frac{m}{2p_xp_y}\cdot p_y=\frac{m}{2p_x}$ and $y^*=\frac{m}{2p_xp_y}\cdotp p_x=\frac{m}{2p_y}$.
+\item Suppose he has m = 16 and that $p_x = 4$ and $p_y = 1$. What is his optimal consumption bundle? What is the utility level associated with this particular bundle?
+\item[] $x^*(4,1,16)=\frac{16}{2(4)}=2$, $y^*(4,1,16)=\frac{16}{2(1)}=8$. Optimal bundle $(x,y)=(2,8)$.
+\item[] Utility level with bundle $U(2,8)=xy=2\cdot8=16$.
+\item Draw two graphs. On both graphs, draw the budget line in black. Label the optimal bundle with letter O.
+\item[] See below.
+\item Now suppose $p_x = 1$. What is the new optimal consumption bundle? 
+\item[] $x^*(1,1,16)=\frac{16}{2(1)}=8$. Optimal bundle $(x,y)=(8,8)$. Utility $U(8,8)=8\cdot8=64$.
+\item On both graphs, draw the new budget line in blue. Mark the new consumption bundle with letter F. What is the total change in demand for good x?
+\item[] See below. $\Delta x=8-2=+6$. 
+\item Suppose that Max is compensated for the decrease in price so that he can still barely attain the same level of utility with the new prices as before the change in price. Is this slutsky or hicks compensation? What would be the optimal consumption? Hint: You will need to solve an expenditure minimization problem here. What would his new income level be?
+\item[] This scenario is Hicksian compensation: adjust income to keep original utility constant.
+\item[] Expenditure minimization: $e(p_x',p_y',u_0)=\min_{x,y}p_xx'+p_yy'$ s.t. $xy\geq u_0$.
+\item[] $\mathcal{L}=x+y+\eta(u_0-xy)\Rightarrow \frac{\partial \mathcal{L}}{\partial x}=1-\eta y \Rightarrow\eta=\frac{1}{y}, \ \frac{\partial \mathcal{L}}{\partial y}=1-\eta x \Rightarrow\eta=\frac{1}{x}$.
+\item[] $x=y$ at optimum. Then, Hicksian bundle is $x^H=\sqrt{u_0}=\sqrt{16}=4 \Rightarrow (4,4)$.
+\item[] Further, $m^H=e=p_x'x+p_y'y=1\cdot 4+1\cdot 4=8$.
+\item On the one of the graphs, draw this budget line in red and label the optimal bundle with letter H.
+\item[] See below.
+\item What are the substitution and income effects of the price change? Calculate how many more or fewer units of good x Max is buying due to the substitution effect and income effect.
+\item[] $x_0=2, \ x^H=4, \ x_1=8 \Rightarrow \text{SE}=x^H-x_0=4-2=2, \ \text{IE}=x_1-x^H=8-4=4$.
+\item Suppose now instead of being compensated for the decrease in price so that he can still barely attain the same level of utility as before the change in price, Max is compensated for the decrease in price so that he can still barely afford the consumption bundle he purchased before the change in price. What would his new income level be? Is this slutsky or hicks compensation? What would be the optimal consumption at this new income level?
+\item[] This scenario is Slutsky compensation: adjust income to keep original bundle affordable.
+\item[] $m^S=p_x'x_0+p_y'y_0=1\cdot 2+1\cdot 8=10$.
+\item[] $\max_{x,y} \ xy$ s.t. $x+y=10 \Rightarrow f(x)=10x-x^2\Rightarrow f'(x)=10-2x \Rightarrow x=5, \ y=5 \Rightarrow (5,5)$.
+\item On the graph that only has the blue and black lines, draw the new budget line in red and label the optimal bundle with letter S. 
+\item[] See below.
+\item What are the substitution and income effects of the price change? Calculate how many more or fewer units of good x Max is buying due to the substitution effect and income effect.
+\item[] $x_0=2, \ x^S=5, \ x_1=8 \Rightarrow \text{SE}=x^S-x_0=5-2=3, \ \text{IE}=x_1-x^S=8-5=3$.
+\item For which mode of compensation, the substitution effect is greater (in absolute terms)? For which mode of compensation, the income effect is greater (in absolute terms)? 
+\item[] From (h/Hicks): $|\text{SE}|=2,\ |\text{IE}|=4$. From (k/Slutsky): $|\text{SE}|=3,\ |\text{IE}|=3$.
+\item[] Hicks has a greater income effect, Slutsky has a greater substitution effect.
+\item[]
+\item[] Graph for (4):
+\item[]
+\includegraphics[width=8cm]{IMG_A1B90EA804F3-1.jpeg}
+\end{enumerate}
+\item Catherine likes peanut butter and jelly sandwiches, but she is very particular and wants exactly 1 oz. of jelly (j) for each 2 oz. of peanut butter (b). Hence, her utility is given by $U(j,b) = min\{2j,b\}$.
+\begin{enumerate}[label=(\alph*)]
+\item Sketch a graph with 3 indifference curves. Put j on the horizontal axis and b on the vertical axis. Be sure to clearly label the utility level associated with each indifference curve.
+\item Find the Marshallian demand functions that describe Catherine’s optimal choice (i.e. express the optimal choices of peanut butter and jelly as general functions of prices and income).
+\item[] $\min_{2j,b} \ U(j,b)$ s.t. $p_jj+p_bb\leq m$. Fixed consumption bundles for utility $u$: $u=2j=b$.
+\item[] Cost($u$) $=p_j\frac{u}{2}+p_bu=u(\frac{p_j}{2}+p_b)$. Maximize utility with cost $m$: $u^*=\frac{m}{\frac{p_j}{2}+p_b}$.
+\item[] Then, $j^*=\frac{u^*}{2}=\frac{m}{2(\frac{p_j}{2}+p_b)}=\frac{m}{p_j+2p_b}$, and $b^*=u^*=\frac{2m}{p_j+2p_b}$.
+\item Suppose Catherine has a weekly budget of \$16 to use for sandwiches and buys only these two goods (a nice friend supplies the bread). The prices are $P_b = 1$ and $P_j = 2$. What is her optimal consumption bundle?
+\item[] $m=16, \ p_b=1, \ p_j=2$. Optimal utility denominator: $p_j+2p_b=2+2\cdot1=4$.
+\item[] Then, $j^*=\frac{16}{4}=4$, $b^*=\frac{2\cdot 16}{4}=8$. So, $(j,b)=(4,8)$.
+\item If the price of jelly increases to \$6, find her new optimal consumption bundle.
+\item[] $m=16, \ p_b=1, \ p_j'=6$. New optimal utility denominator: $p_j'+2p_b=6+2\cdot1=8$.
+\item[] Then, $j^*=\frac{16}{8}=2$, and $b^*=\frac{2\cdot 16}{8}=4$. So $(j,b)=(2,4)$.
+\item What is the total change in the demand for jelly? What part of the change in demand for jelly is due to the income effect and what part is due to the substitution effect? Demonstrate your answer numerically and illustrate it using a graph. Hint: You can either use Slutsky or Hicks decomposition. Your answers will be the same regardless of which one you are using. 
+\item[] $\Delta j=j_1-j_0=2-4=-2$. Since preferences are perfect compliments, SE $=0$, IE $=-2$.
+\item[] Slutsky decomposition: Cost at new prices: $m^S=p_j'j_0+p_bb_0=6\cdot4+1\cdot8=32$. New budget: $6j+1b=32$. Plug $b=2j$ in budget:  $6j+1(2j)=32\Rightarrow8j=32\Rightarrow j^S=4, \ b=8$. Thus, $\text{SE}=j^S-j_0=4-4=0$, and $\text{IE}=j_1-j^S=2-4=-2$.
+\item[]
+\item[] Graph for (5):
+\item[]
+\includegraphics[width=5cm]{IMG_FAA6F75B91CA-1.jpeg}
+\end{enumerate}
+\end{enumerate}
+\end{document}
+\item Peter enjoys cereals (c) and raisins (r). His preferences are represented by the following utility function: $u(c,r)=3ln(c)+r$.
+\begin{enumerate}[label=(\alph*)]
+\item Write down his utility maximization problem, form the Lagrangian, and find his Marshallian demand functions.
+\item Suppose the price of a pound of cereal and price of a pound of raisins are equal to \$4 and Peter's income is \$60. What is his optimal consumption bundle?
+\item Suppose the price of a pound of cereal increases to \$5. What is his optimal consumption bundle with the new prices?
+\item What is the total change in the demand for cereal? Calculate the magnitudes of substitution and income effect of this price change. Demonstrate your answer numerically. Hint: You can either use Slutsky or Hicks decomposition. Indicate which one you are using. Your answers will be slightly different depending on which compensation method you are using.
+\end{enumerate}

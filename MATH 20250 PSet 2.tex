@@ -1,0 +1,303 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{array}
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\Char}{\mathrm{char}}
+
+\newcommand{\id}{\mathsf{id}}
+
+\renewcommand{\phi}{\varphi}
+
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+	
+	\bigskip 
+}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\newcommand{\hide}[1]{{\color{red} #1}} 
+\newcommand{\com}[1]{{\color{blue} #1}} 
+\newcommand{\meta}[1]{{\color{green} #1}} 
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\head{Abstract Linear Algebra, Sections 41\&51, Autumn 2025\\ HOMEWORK 2} 
+
+This homework is due to {\bf October 13}, midnight. The total grade is 30 points. Please upload your solution on Canvas/Gradescope.
+
+\begin{enumerate}
+
+\item Let $\bbF$ be a field. The \emph{characteristic} of $\bbF$, often denoted $\Char(\bbF)$, is the smallest positive (natural) number $n$ such that
+$$n\cdot 1 = \underbrace{1+\ldots +1}_{\text{$n$ times}} =0 $$
+if such number $n$ exists, and $0$ otherwise.
+\begin{enumerate}
+\item (\emph {2 points}) Show that the characteristic $\Char(\bbF)$ is either a prime number or $0$.
+\item[] Suppose char($\bbF$) is $=n>0$. If $n$ were composite, $n=ab$ with $1<a,b<n$.
+\item[] Then, $(a\cdot1)(b\cdot1)=ab\cdot 1=n\cdot 1=0$.
+\item[] Since $\bbF$ is a field, it has no zero dividers, therefore one of the factors of $n$ must be 0. Therefore, $a\cdot1=0$ or $b\cdot1=0$, which contradicts factor minimality of $n$ as $a,b<n$. Hence, $n$ must be a prime number, or if no positive $n$ exists, then char($\bbF$) must be 0.
+\item (\emph {1 point}) Suppose that the field $\bbF$ is finite. Show that $\Char(\bbF)\neq 0$.
+\item[] By contradiction, suppose that char($\bbF$) $=0$. Then the map, $\bbZ \mapsto \bbF$ given by $f(k)=k\cdot1$ is injective because no non-zero number $n$ maps to 0. Correspondingly, the image, $f(\bbZ)$ would be an infinite subset of $\bbF$, contradicting that $\bbF$ is finite. Hence, char($\bbF$) $\neq 0$.
+\item (\emph {1 point}) Suppose that the field $\bbF$ is finite and $\Char(\bbF)=p$. Show that $p$ divides $|\bbF|$.
+\item[] From (a), char($\bbF$) is the smallest prime with $p\cdot1=0$. The set \{$0,1,2\cdot1,... (p-1)\cdot1$\} is a prime subfield of $\bbF$ isomorphic to $\bbF_p=\bbZ/p\bbZ$, with $p$ distinct elements. Since $p$ is the size of the prime subfield, then $\bbF$ is a multiple or power of $p$.ff
+\item (\emph{2 points}) Construct a field with exactly $4$ elements. Hint: {\it it is enough to provide the addition and multiplication tables.}
+\item[] A field $\bbF_4$ can be represented by the set \{$0,1,a,a+1$\} where $a+1=a^2$. Finite fields can only exist for sizes $p^n$ where $p$ is prime and $n\geq1$. Thus, the following tables represent an extension of $\bbF_2$ with each element writen as $x+y\alpha, xy\in \bbF_2$:
+\[
+\begin{array}{c|cccc}
++ & 0 & 1 & a & a+1 \\ \hline
+0 & 0 & 1 & a & a+1 \\
+1 & 1 & 0 & a+1 & a \\
+a & a & a+1 & 0 & 1 \\
+a+1 & a+1 & a & 1 & 0 \\
+\end{array}
+\]
+
+\[
+\begin{array}{c|cccc}
+\times & 0 & 1 & a & a+1 \\ \hline
+0 & 0 & 0 & 0 & 0 \\
+1 & 0 & 1 & a & a+1 \\
+a & 0 & a & a+1 & 1 \\
+a+1 & 0 & a+1 & 1 & a \\
+\end{array}
+\]
+\end{enumerate}
+
+\item Let $\mathbb{R}_+=\{x\in\mathbb{R} \;|\; x>0\}$ be the set of positive real numbers. 
+\begin{enumerate}
+
+\item (\emph{1 point}) Suppose that we define addition and scalar multiplication (by $\alpha\in\mathbb{Q}$) on $\mathbb{R}_+$ in the usual way. Show that $\mathbb{R}_+$ is \emph{not} a vector space over $\mathbb{Q}$.
+\item[] A vector space over a field $\bbF$ is a set $V$ that, among others, satisfies the additive identity, $0_V$. $0\notin \bbR_+$, and thus $\bbR_+$ is neither closed under addition nor a vector space over $\bbQ$.
+
+\item (\emph{2 points}) Suppose instead that we define addition and scalar multiplication (by $\alpha\in\mathbb{Q}$) as follows:
+
+\begin{itemize}
+
+\item If $x\in\mathbb{R}_+$ and $y\in\mathbb{R}_+$, then $x+y=xy$.
+\item If $x\in\mathbb{R}_+$ and $\alpha\in\mathbb{Q}$, then $\alpha \cdot x=x^{\alpha}$.
+
+\end{itemize}
+
+Show that, with these notions of addition and scalar multiplication, $\mathbb{R}_+$ \emph{is} a vector space over $\mathbb{Q}$.
+\item[] Take the real logarithm map, log: ($\bbR_+, \cdot$) \ $\mapsto$ \ ($\bbR,+$). Under log, multiplication becomes addition and exponentiation becomes scalar multiplication: log($x^\alpha$)$=$ $\alpha$log($x$). Thus $\bbR_+$, with the new notions, holds all axioms, and is isomorphic to $\bbR$ as a vector space over $\bbQ$. 
+
+\end{enumerate}
+
+\item For each of the following vector spaces $V$ (over $\bbR$) and collections of vectors in $V$, determine whether or not the vectors are linearly independent. Prove each answer.
+
+\begin{enumerate}
+
+\item[(a)] (\emph{1 point}) $V=\mathbb{R}^2$;\; $\mathbf{v}_1=\begin{bmatrix} 1\\ 1\end{bmatrix}$,\; $\mathbf{v}_2=\begin{bmatrix} 2\\ 1\end{bmatrix}$,\; $\mathbf{v}_3=\begin{bmatrix} 3\\ 2\end{bmatrix}$
+\item[] The vectors are linearly dependent. 3 vectors in a 2-dimensional space must be dependent. Further, $\mathbf{v}_1 +\mathbf{v}_2 = \mathbf{v}_3$ $\Rightarrow $ $1\cdot \mathbf{v}_1 + -1\cdot \mathbf{v}_2 + 0\cdot \mathbf{v}_3=0$, a non-trivial relation.
+
+\item[(b)] (\emph{1 point}) $V=\mathbb{R}^3$;\; $\mathbf{v}_1=\begin{bmatrix} 1\\ 0\\ 1\end{bmatrix}$,\; $\mathbf{v}_2=\begin{bmatrix} 0\\ 1\\ 0\end{bmatrix},\; \mathbf{v}_3=\begin{bmatrix} 2\\ 2\\ 1\end{bmatrix}$
+\item[] The vectors are linearly independent. None of the vectors can be written as a linear combination of the others. Only the trivial solution satisfies $a\mathbf{v}_1+b\mathbf{v}_2+c\mathbf{v}_3=0.$
+
+\item[(c)] (\emph{1 point}) $V=M_{2\times 2}(\mathbb{R})$;\; $\mathbf{v}_1=\begin{bmatrix} 1 & 0\\ 0 & -1\end{bmatrix}$,\; $\mathbf{v}_2=\begin{bmatrix} 0 & 1\\ 1 & 0\end{bmatrix}$
+\item[] The vectors are linearly independent. Suppose $a\mathbf{v}_1+b\mathbf{v}_2=0$. Comparing entries:
+\item[] Top-left entry: $1\cdot a+ 0\cdot b=a=0$
+\item[] Bottom-left entry: $0\cdot a+1\cdot b=b=0$
+\item[] The other entries follow. Hence, $a=b=0$. The two matrices force 0 coefficients.
+
+\item[(d)] (\emph{1 point}) $V=\mathbb{R}[t]_{\leq 2}$;\; $\mathbf{v}_1=3t$,\; $\mathbf{v}_2=-t^2$,\; $\mathbf{v}_3=1-2t+t^2$
+\item[] The vectors are linearly independent. Suppose $A(3t)+B(-t^2)+C(1-2t+t^2)=0$. Set constant $C=0$ and compare the resulting coefficients:
+\item[] $t$-coefficient: $3A-2C=3A=0 \Rightarrow A=0$
+\item[] $t^2$-coefficient: $-B+C=-B=0 \Rightarrow B=0$
+\item[] Only the trivial solution exists, therefore independent.
+\end{enumerate}
+
+\item True or false? If the statement is ``true", then prove this fact; if it is ``false", then provide a counterexample that shows that the statement is false. 
+
+\begin{enumerate}
+
+\item[(a)] (\emph{2 points}) If $\mathbf{v}_1$, $\mathbf{v}_2$, $\dots$, $\mathbf{v}_n$ are linearly independent vectors in $V$ and $\alpha\neq0$, then 
+$$\alpha\mathbf{v}_1,\; \alpha\mathbf{v}_2,\; \dots,\; \alpha\mathbf{v}_n$$
+are linearly independent.
+\item[] True. Suppose $c_1(\alpha \mathbf{v}_1)+...+c_2(\alpha \mathbf{v}_n)=0$. Since $\alpha \neq 0$, $\alpha$ can be factored, leaving $c_1\mathbf{v}_1+...+c_n\mathbf{v}_n=0$. Since $\mathbf{v}_i$ are independent, all $c_i=0$. Therefore the scaled list of vectors are also independent as non-zero scalars only change magnitude not relations.
+
+\item[(b)] (\emph{2 points}) If $\mathbf{v}_1$, $\mathbf{v}_2$, $\dots$, $\mathbf{v}_n$ and $\mathbf{w}_1$, $\mathbf{w}_2$, $\dots$, $\mathbf{w}_n$ are two lists of linearly independent vectors in $V$, then 
+$$\mathbf{v}_1+\mathbf{w}_1,\; \mathbf{v}_2+\mathbf{w}_2,\; \dots,\; \mathbf{v}_n+\mathbf{w}_n$$
+are linearly independent. 
+\item[] False. Counterexample: Let $V=\bbR^2$. 
+\item[] Take $\mathbf{v}_1=(1,0), \mathbf{v}_2=(0,1)$ and $\mathbf{w}_1=(1,0), \mathbf{w}_2=(0,-1)$.  
+\item[] Both lists are linearly independent, but $\mathbf{v_2} +\mathbf{w_2}=(0,0)$. Since one of the sums is 0, the list $(\mathbf{v_1}+\mathbf{w_1}, \mathbf{v_2}+\mathbf{w_2})$ is dependent. In this case, adding two independent lists of vectors can produce cancellations, resulting in independency not being preserved.
+
+\end{enumerate}
+
+\item Let $\bbF$ be a field and let $X$ be a set. Let 
+$$F_c(X,\bbF) = \{f\colon X \to \bbF \; | \; f(x)=0 \; \text{for all but finitely many $x\in X$} \}$$
+denote the set of functions on the set $X$ with values in the field $\bbF$ which vanishes in all expect finitely many points $x\in X$ (so called functions with finite support).
+
+\begin{enumerate}
+\item (\emph{2 points}) Show that $F_c(X,\bbF)=F(X,\bbF)$ if and only if $X$ is finite.
+\item[] If $X$ is finite, then any function $f:X\mapsto \bbF$ is zero outside all of $X$, so trivially it vanishes outside a finite set. Thus, $F_c(X,\bbF)=\bbF^X$. If $X$ is infinite, $f\equiv1$ does not vanish.
+\item (\emph{3 points}) Let $f,g \in F_c(X,\bbF)$ and $a\in \bbF$. Show that $f+g \in F_c(X,\bbF)$ and $a\cdot f\in F_c(X,\bbF)$ where
+$$(f+g)(x) = f(x)+g(x)\;\; \text{and} \;\; (a\cdot f)(x)=a\cdot f(x)$$ for all $x\in X$. Conclude that $(F_c(X,\bbF),+,\cdot)$ is a vector space over $\bbF$.
+\item[] Let supp($f$)$=\{x\in X : f(x) \neq0\}$. Let supp($g$)$=\{x\in X : f(g) \neq0\}$. Assume both supports are finite. Then supp($f+g$)$\ \subseteq$ supp($f$)$\ \cup\ $supp($g$), a finite union, therefore finite. Also, supp($af$)$\ \subseteq$ supp($f$), if $a=0$, thus closure under addition and multiplication holds, the zero function exists, and additive inverses exist to negate values.
+\item (\emph{4 points}) Let $x\in X$. Define a function $\delta_x\colon X \to \bbF$ by the rule
+$$\delta_x(y) = 
+\begin{cases}
+1 & \mbox{if $y=x$,}\\
+0 & \mbox{if $y\neq x$.}
+\end{cases}
+$$
+Show that the collection $\{\delta_x\}_{x\in X} \subset F_c(X,\bbF)$ is a basis of $F_c(X,\bbF)$.
+\item[] First: Each $\delta_x \in F_c(X,\bbF)$. To span: Take any $f\in F_c(X,\bbF)$. Its support, S, $f=\sum_x\inS f(x)\delta_x$ is finite then because evaluating both sides at any $y\in X$ gives the same value, and thus it spans. To check  linear independence: Suppose a finite linear combination $\sum_(i=1)^n c_i\delta_{x_i}=0$. Evaluate $x_j$ to yield $c_j=0$, then all $c_i=0$. Thus \{$\delta_x$\} is a basis.
+\item (\emph{4 points}) Show that the vector space $F_c(X,\bbF)$ is \emph{not} finite dimensional if the set $X$ is infinite.
+\item[] From (c), $\{\delta_x\}_{x\in X}$ is a basis. If $X$ is infinite, then the basis is infinite, then the dimension is infinite. However, if a finite basis existed, each function with finite support would be a linear combination of a finite number of basis vectors, but this cannot represent an arbitrarily infinite number of $\delta_x$'s. So the dimension is not finite.
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

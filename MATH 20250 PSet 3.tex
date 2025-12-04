@@ -1,0 +1,269 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\id}{\mathsf{id}}
+
+\renewcommand{\phi}{\varphi}
+
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+	
+	\bigskip 
+}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\newcommand{\hide}[1]{{\color{red} #1}} 
+\newcommand{\com}[1]{{\color{blue} #1}} 
+\newcommand{\meta}[1]{{\color{green} #1}} 
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\head{Abstract Linear Algebra, Sections 41\&51, Autumn 2025\\ HOMEWORK 3} 
+
+This homework is due {\bf October 20}, midnight. The total grade is 30 points. Please upload your solution on Canvas/Gradescope.
+
+\begin{enumerate}
+
+\item Let $p$ be a prime number and let $\mathbb{F}_p=\{0,1,2,\dots, p-1\}$ be the finite field with $p$ elements. 
+
+\begin{enumerate}
+\item (\emph{2 points}) Compute the number of $1$-dimensional subspaces in $\bbF_p^2$.
+\item[] A 1-dimensional subspace is a line through the origin. Therefore, each subspace contains exactly $p-1$ nonzero vectors. For $\bbF^2_p$ the total number of of nonzero vectors is $p^2-1$. As such, the number of distinct 1-dimensional subspaces is $\frac{p^2-1}{p-1}=p+1$.
+\item (\emph{2 points}) Compute the number of $1$-dimensional subspaces in $\bbF_p^n$ for $n\geq 1$.
+\item[] Similarly, there are $p^n-1$ nonzero vectors, and each 1-dimensional subspace contributes $p-1$ nonzero vectors, hence the number of 1-dimensional subspaces is $\frac{p^n-1}{p-1}$ for $n\geq1$.
+\item (\emph{4 points}) Compute the number of (ordered) pairs $(v,w)$ of linearly independent vectors $v,w \in \bbF_p^n$ for $n\geq 2$.
+\item[] For any single nonzero vector, $v$, there are $p^n-1$ choices. Considering a second nonzero vector, $w$, not defined in the 1-dimensional subspace spanned by $v$ (with $p$ vectors), there are then $p^n-p$ choices for $w$. Thus, the number of ordered pairs $(v,w)$ of linearly independent vectors $v,w \in \bbF^n_p = (p^n-1)(p^n-p)$ for $n\geq2$.
+\item (\emph{4 points}) Compute the number of $2$-dimensional subspaces in $\bbF_p^n$ for $n\geq 2$.
+\item[] Number of ordered pairs, $(v,w)$, of linearly independent vectors in $\bbF^n_p = (p^n-1)(p^n-p)$. Number of ordered bases of a 2-dimensional space over $\bbF^n_p=(p^2-1)(p^2-p)$.
+\item[] Hence, the number of distinct 2-dimensional spaces $=\frac{(p^n-1)(p^n-p)}{(p^2-1)(p^2-p)}=\frac{(p^n-1)(p^{n-1}-1)}{(p^2-1)(p-1)}$.
+\end{enumerate}
+
+\item Let $V$ be a finite dimensional vector space over the field $\bbC$ of complex numbers. Let $V_{\mathbb{R}}$ denote the same set but regarded as a vector space over the field $\bbR$ of real numbers.
+
+\begin{enumerate}
+\item (\emph{2 points}) Let $\mathbf{v}_1,\mathbf{v}_2,\ldots, \mathbf{v}_n \in V$ be a basis of $V$. Show that the vectors
+$$\mathbf{v}_1, \mathbf{v}_2,\ldots, \mathbf{v}_n, i\mathbf{v}_1,i\mathbf{v}_2, \ldots, i\mathbf{v}_n$$
+form a basis of the vector space $V_{\mathbb{R}}$.
+\item[] Linear independence: Suppose real scalars $\alpha _j, \beta _j \in \bbR$ satisfy $\sum^n_{j=1}(\alpha _jv_j+\beta _jiv_j)=0$. Can be rewritten as $\sum ^n_{j=1} (\alpha _j+i\beta _j)v_j=0$. $v_j$ form the $\bbC$ basis, so all complex coefficients $\alpha _j+i\beta _j$ must be 0. Hence $\alpha _j=\beta _j=0$ for all $j$. Therefore the $2n$ vectors are independent.
+\item[] Span: Any vector, $v$, can be written over $\bbC$ as $v=\sum ^n_{j=1} c_jv_j, c_j=a_j+ib_j$ $(a_j,b_j\in \bbR)$. Then $v=\sum ^n_{j=1} a_jv_j+\sum ^n_{j=1}b_j(iv_j)$, which is a linear combination of $v_j$ and $iv_j$. Since any vector can be expressed within the real and complex space, the set spans $V_\bbR$.
+\item[] Independence and spanning forms a basis for the vector space $V_\bbr$.
+
+\item (\emph{2 points}) Prove that $\dim_{\bbR} V_{\bbR} = 2\dim_{\bbC}(V_\bbC)$.
+\item[] The basis from (a) has dimension of $2n$, thus $\dim_{\bbR} V_{\bbR} = 2\dim_{\bbC}(V_\bbC)$.
+\end{enumerate}
+
+\item (\emph{2 points}) Let $S\subset V$ be a subset of a vector space $V$ over $\bbF$. Show that the linear span $\mathrm{Span}_{\bbF}(S)$ is the smallest (with respect to inclusion) vector subspace of $V$ that contains $S$. In other words, show that $\mathrm{Span}_{\bbF}(S)$ is a vector subspace and any other vector subspace that contains $S$ also contains $\mathrm{Span}_{\bbF}(S)$.
+\item[] $\mathrm{Span}_{\bbF}(S)$ is the set of all linear combinations of elements in $S$. Span is a subspace, closed under addition and scalar multiplication (sums of linear combinations and scalar multiples are also linear combinations). The zero vector is also included in span. Further, Span satisfies minimality. If $U\subset V$ is any vector space with $S\subset U$, then every finite combination of elements in $S$ lies in $U$. Hence, $\mathrm{Span}_{\bbF}(S) \subset U$, and is the smallest subspace in $V$ with $S$.
+
+\item For each of the following vector spaces $V$ (over $\bbR$) and subspaces $W$, find:
+
+\begin{itemize}
+\item a basis of $W$,
+\item $\dim_{\bbR}(W)$.
+\end{itemize}
+
+(In each case, you do not need to prove that $W$ actually is a subspace of $V$.)
+
+\begin{enumerate}
+
+\item[(a)] (\emph{2 points}) $V=\mathbb{R}^3$; $W=\left\{\begin{bmatrix} x\\ y\\ z\end{bmatrix} \;\Big|\;\; x-y+3z=0\right\}$
+\item[] $x=y-3z$. $(x,y,z)=y(1,1,0)+z(-3,0,1)$. A basis is \{$(1,1,0),(-3,0,1)$\}.
+\item[] $\dim_{\bbR}(W)=2$.
+
+\item[(b)] (\emph{2 points}) $V=\mathbb{R}^4$; $W=\left\{\begin{bmatrix} x\\ y\\ z\\ w\end{bmatrix} \; \Bigg|\;\; y=3z,\; x=-5w\right\}$
+\item[] $z,w$ free. $(x,y,z,w)=z(0,3,1,0)+w(-5,0,0,1)$. A basis is \{$(0,3,1,0),(-5,0,0,1)$\}.
+\item[] $\dim_{\bbR}(W)=2$.
+
+\item[(c)] (\emph{2 points}) $V=M_{2\times 2}(\mathbb{R})$; $W=\left\{\begin{bmatrix} a_{1,1} & a_{1,2} \\ a_{2,1} & a_{2,2}\end{bmatrix} \;\Bigg|\;\; a_{1,1}+a_{2,2}=0\right\}$
+\item[] $a_{1,1}=-a_{2,2}$. $\begin{bmatrix} a & b \\ c & -a \end{bmatrix}$. A basis is \{\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}, \begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}, \begin{bmatrix} 0 & 0 \\ 1 & 0 \end{bmatrix}\}.
+\item[] $\dim_{\bbR}(W)=3$.
+
+\item[(d)] (\emph{2 points}) $V=\mathbb{R}[t]_{\leq 3}$; $W=\left\{p(t)=a+bt+ct^2+dt^3 \;\;\Big|\;\; p'(2)=0\right\}$
+\item[] $b+4c+12d=0 \Rightarrow b=-4c-12d$. $a,c,d$ free. $p(t)=a+(-4c-12d)t+ct^2+dt^3$. Therefore a basis is \{$(1, t^2-4t,t^3-12t)$\}.
+\item[] $\dim_{\bbR}(W)=3$.
+
+\end{enumerate}
+
+\item Let $S \subset V$ be a finite subset of vectors in a vector space $V$ over $\bbF$. Let $S'\subset S$ be a maximal set of linearly independent vectors from $S$. Show that 
+\begin{enumerate}
+\item (\emph{1 point}) $\mathrm{Span}_{\bbF}(S') = \mathrm{Span}_{\bbF}(S)$;
+\item[] $\mathrm{Span}_{\bbF}(S') \subset \mathrm{Span}_{\bbF}(S)$. For reverse, if some $v\in S$ were not in $\mathrm{Span}_{\bbF}(S')$, then $S' \cup \{v\}$ would be linearly dependent, contradicting maximality of $S'$. Hence, every element of $S$ lies in $\mathrm{Span}_{\bbF}(S')$, so $\mathrm{Span}_{\bbF}(S) \subset \mathrm{Span}_{\bbF}(S')$. Therefore, the equality holds.
+\item (\emph{1 point}) $\dim_{\bbF}(\mathrm{Span}_{\bbF}(S))\leq |S|$.
+\item[] A maximal independent subset $S'$ has $|S'|=\dim_{\bbF}(\mathrm{Span}_{\bbF}(S))$. Also note that since $S' \subset S$, $|S'| \leq |S|$. Thus, $\dim_{\bbF}(\mathrm{Span}_{\bbF}(S)) \leq |S|$.
+\item (\emph{2 points}) Is it possible that vectors $\mathbf{v}_1,\mathbf{v}_2,\mathbf{v}_3$ are linearly \emph{dependent}, but the vectors $\mathbf{w}_1=\mathbf{v}_1+\mathbf{v}_2, \mathbf{w}_2=\mathbf{v}_2+\mathbf{v}_3$ and $\mathbf{w}_3=\mathbf{v}_3+\mathbf{v}_1$ are linearly \emph{independent}?
+\item[] If $v_1,v_2,v_3$ are linearly dependent, then $\dim_{\bbF}(\mathrm{Span}(\{v_1,v_2,v_3\})) \leq 2$. However, each $w_1,w_2,w_3$ is a linear combination of the $v_j$, so therefore $w_j$ all lie in the same span which also has a dimension of at most 2. Thus three vectors $w_j$ cannot be independent.
+\end{enumerate}
+
+\iffalse
+\item Suppose that $W_1$, $W_2$ are subspaces of a finite-dimensional vector space $V$ over a field $\mathbb{F}$. Define the \emph{sum} of the subspaces $W_1$ and $W_2$ as the subspace
+$$W_1+W_2=\left\{\mathbf{v}\in V \;\;|\;\; \text{$\mathbf{v}=\mathbf{w}_1+\mathbf{w}_2$ for some $\mathbf{w}_1\in W_1$ and $\mathbf{w}_2\in W_2$}\right\}\subset V.$$
+
+\begin{enumerate}
+
+\item[(a)] (\emph{2 points}) Prove that $\dim(W_1+W_2)\leq \dim(W_1)+\dim(W_2)$. {\it Hint: use the previous problem.}
+
+\item[(b)] (\emph{2 points}) Suppose now that the intersection $W_1\cap W_2=\{\mathbf{0}\}$ is the trivial subspace. In this case, the subspace $W_1+W_2$ is often called a \emph{direct sum} and the symbol $W_1\oplus W_2$ is used instead. Prove that
+$$\dim(W_1\oplus W_2)=\dim(W_1)+\dim(W_2).$$
+
+\item[(c)] (\emph{2 points}) Prove that $V=W_1\oplus W_2$ if and only if every vector $\mathbf{v}\in V$ can be written as $\mathbf{v}=\mathbf{w}_1+\mathbf{w}_2$ in a \emph{unique} way. 
+
+\item[(d)] (\emph{2 points}) Prove that if $W_1\subseteq V$ is any subspace of $V$, then there exists a subspace $W_2\subseteq V$ such that $W_1\oplus W_2=V$. 
+
+\end{enumerate}
+\fi
+
+\end{enumerate}
+
+\end{document}

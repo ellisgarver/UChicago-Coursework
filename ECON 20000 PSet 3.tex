@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+
+
+\title{Econ 20000-Problem Set 3}
+\author{Dr. Fulya Ersoy}
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+\item (Quasilinear utility Function-Marshallian Demand) Lima 5.8 
+
+\includegraphics[width=\textwidth]{Lima-Exercise-5.8.jpg}
+
+\item[] a. $\max_{x,y}U(x,y)=y+\sqrt{x}$, w.r.t budget constraint: $p_xx+p_yy=m$.
+\item[] b. $\mathcal{L}=y+\sqrt{x}+\lambda(m-p_xx-p_yy)$. First order conditions:
+\item[] $\frac{\partial \mathcal{L}}{\partial x}=\frac{1}{2\sqrt x}-\lambda p_x=0$. $\frac{\partial \mathcal{L}}{\partial y}=1-\lambda p_y=0$. $\frac{\partial \mathcal{L}}{\partial \lambda}=m-p_xx-p_yy=0$.
+\item[] c. From first two FOCs: $\lambda=\frac{1}{p_y}=\frac{1}{2\sqrt{x}p_x} \Rightarrow MRS_{xy}=\frac{MU_x}{MU_y}=\frac{p_x}{p_y}=\frac{1}{2\sqrt{x}}$. Thus, consumer indifference curves decrease with $x$, in other words, ICs are convex and quasilinear in y.
+\item[] d. From MRS condition: $\frac{1}{2\sqrt{x}}=\frac{p_x}{p_y}\Rightarrow x^*=(\frac{p_y}{2p_x})^2$. Substituting into budget constraint, $p_xx^*+p_yy^*=m \Rightarrow y^*=\frac{m-p_xx^*}{p_y}=\frac{m-p_x(\frac{p_y}{2p_x})^2}{p_y}=\frac{m}{p_y}-\frac{p_y}{4p_x}$.
+\item[] e. Substituting given values: $x^*=(\frac{1}{2(1)})^2=\frac{1}{4},\ y^*=\frac{\frac{1}{9}}{1}-\frac{1}{4(1)}=-\frac{5}{36}$. Since $y^*$ cannot be negative by the feasibility condition, the consumer spends all income on the good with higher relative utility (corner vs interior solution, $y=0$). Here $U(x,0)=\sqrt{x}, $ subject to $x=\frac{m}{p_x}=\frac{1}{9}$. Thus, optimal consumption levels are $x=\frac{1}{9},\ y=0$ with $U=\frac{1}{3}$.
+\item[] f. If income increases to $m=1$, interior solution works: $x^*=(\frac{1}{2(1)})^2=\frac{1}{4}$, $y^*=\frac{1}{1}-\frac{1}{4(1)}=\frac{3}{4}$.
+\item[] g. $x^*$ is not affected by changes in income. Share of income spent on good $x$ falls with greater income because $x$ is fixed at $p_xx^*$. $y^*$ increases linearly with income. Share of income spent on good $y$ rises with greater income, inverse to relationship with $x$.
+\end{enumerate}
+\begin{enumerate}
+
+ \setcounter{enumi}{1}
+\item (Perfect Subtitutes -Marshallian Demand) Suppose that indifference curves are described by straight lines with a slope of -b. Given prices ($p_1$ and $p_2$) and income ($m$), find the consumers demand function for good 1 and good 2. Hint: This is a case where the Lagrangian method doesn't work.
+\item[] A utility with $-b$ slope is $u(x,y)=bx+y$, maximized by the budget $p_1x+p_2y\leq m$. Here, $MU_1=b,\ MU_2=1$ and $\frac{MU_1}{p_1}=\frac{b}{p_1},\ \frac{MU_2}{p_2}=\frac{1}{p_2}$. There are three cases in the demand function:
+\item[] If $\frac{b}{p_1}>\frac{1}{p_2}$, consumer only buys good 1: $x^*_1(p_1,p_2,m)=\frac{m}{p_1},\ x^*_2=0$.
+\item[] If $\frac{b}{p_1}<\frac{1}{p_2}$, consumer only buys good 2: $x^*_1=0,\ x^*_2(p_1,p_2,m)=\frac{m}{p_2}$.
+\item[] If $\frac{b}{p_1}=\frac{1}{p_2}$, every bundle on the budget line is optiomal: $\{(x,y)\geq0,\ p_1x+p_2y= m\}$.
+\item Consider the problem:
+$\underset{x, y}{min} (p_x x+p_y y)$ subject to $\alpha lnx+ (1-\alpha) lny=ln\bar{u}$
+\begin{enumerate}[label=(\alph*)]
+\item Form the Lagrangian function associated with this constrained minimization problem.
+\item[] Choose multiplier $\eta$. $\mathcal{L}(x,y,\eta)=p_xx+p_yy+\eta(ln\bar u-\alpha lnx-(1-\alpha)lny=0)$
+\item Take the partial derivatives with respect to x, y, and the lagrange multiplier ($\eta$).
+\item[] $\frac{\partial \mathcal{L}}{\partial x}=p_x-\eta\frac{\alpha}{x}$, $\frac{\partial \mathcal{L}}{\partial y}=p_y-\eta\frac{(1-\alpha)}{y}$, $\frac{\partial \mathcal{L}}{\partial \eta}=ln\bar u-\alpha lnx-(1-\alpha)lny$.
+\item Equate the partial derivatives to zero to find the first order conditions and solve the system of equations. Find the Hicksian demand functions and label them $x_h^*$ and $y_h^*$.
+\item[] Set first 2 derivatives $=0$: $p_x=\eta\frac{\alpha}{x}\Rightarrow \eta=\frac{p_xx}{\alpha}$, $p_y=\eta\frac{1-\alpha}{y}\Rightarrow \eta=\frac{p_yy}{1-\alpha}$.
+\item[] Equate expressions for $\eta$: $\frac{p_xx}{\alpha}=\frac{p_yy}{1-\alpha} \Rightarrow \frac{x}{y}=\frac{\alpha p_y}{(1-\alpha)p_x}$. Set arb $r=\frac{\alpha p_y}{(1-\alpha)p_x}\Rightarrow x=ry$.
+\item[] Sub into constraint for $y$: $x^\alpha+y^{1-\alpha}=\bar u \Rightarrow (ry)^\alpha+y^{1-\alpha}=\bar u \Rightarrow r^\alpha y=\bar u \Rightarrow y=\bar ur^{-\alpha}$.
+\item[] Thus, $y_h^*(p_x,p_y,\bar u)=\bar u(\frac{\alpha p_y}{(1-\alpha)p_x})^{-\alpha}=\bar u(\frac{(1-\alpha)p_x}{\alpha p_y})^{\alpha}$.
+\item[] And, $x^*_h(p_x,p_y,\bar u)=r\cdot y^*_h=r\cdot\bar ur^{-\alpha}=\bar u(\frac{\alpha p_y}{(1-\alpha)p_x})^{1-\alpha}$.
+\item Form the expenditure function. Write a single sentence to describe what this function tells us. Use Shephard’s lemma to verify that the Hicksian demand functions are the same as what you found in the previous part.
+\item[] $e=p_xx_h^*+p_yy_h^* \Rightarrow e=\bar up^\alpha_xp_y^{1-\alpha}(\frac{\alpha^{1-\alpha}}{(1-\alpha)^{1-\alpha}}+\frac{(1-\alpha)^{\alpha}}{\alpha^{\alpha}}) \Rightarrow e(p_x,p_y,\bar u)=\bar u(\frac{p_x^\alpha p_y^{1-\alpha}}{\alpha^\alpha(1-\alpha)^{1-\alpha}})$.
+\item[] The known expenditure function depicts the minimal amount of money needed to be spent at given market prices ($p_x,p_y$) to achieve a target utility $\bar u$.
+\item[] Shephard's: $x_h^*=\frac{\partial e}{\partial p_x}=\bar u(\frac{\alpha p_x^{\alpha-1}p_y^{1-\alpha}}{\alpha^\alpha (1-\alpha)^{1-\alpha}})=\frac{\alpha e}{p_x}$, $y_h^*=\frac{\partial e}{\partial p_y}=\bar u(\frac{(1-\alpha) p_x^{\alpha}p_y^{-\alpha}}{\alpha^\alpha (1-\alpha)^{1-\alpha}})=\frac{(1-\alpha) e}{p_y}$. Plugging back in confirms Hicksian demand functions for $x$ and $y$ as shown above.
+\item Definition: A function $f(x, y)$ is said to be homogeneous of degree k if $f(t · x, t · y) = t^k · f(x, y)$, where k is a nonnegative integer and $t > 0$ is a positive constant. Use this definition to show that the expenditure function is homogenous of degree 1 in prices. Notice that the statement you are trying to show involves prices and NOT the target utility level. Briefly explain what this property means in words.
+\item[] Checking $e(tp_x,tp_y,\bar u)$: $\Rightarrow \bar u(\frac{(tp_x)^\alpha(tp_y)^{1-\alpha}}{\alpha^\alpha(1-\alpha)^{1-\alpha}})=t\cdot\bar u(\frac{(p_x)^\alpha(p_y)^{1-\alpha}}{\alpha^\alpha(1-\alpha)^{1-\alpha}})=t\cdot e(p_x,p_y,\bar u)$.
+\item[] Thus, $e$ is homogeneous degree 1. Scaling prices by $t$ scales expenditure by same factor $t$.
+\end{enumerate}
+\item Compute the expenditure function for the perfect complements utility function $u(x_1, x_2) = min\{x_1, x_2\}$ when a consumer faces prices $p_1$ and $p_2$ and wants to achieve target utility $\bar{u}$ . Does your result make sense? Why or why not?
+\item[] To achieve $\bar u$ with $u=$ min$\{x_1,x_2\}$, $x_1\geq \bar u$ and $x_2\geq \bar u$. Then, the cost-minimizing method is to set $x_1=x_2=\bar u$. Hence, $e(p_1,p_2,\bar u)=p_1\bar u +p_2\bar u=\bar u(p_1+p_2)$. This function makes sense due to fixed 1:1 ratio per unit of utility, resulting in total cost $=\ \bar u \ \cdot \ $sum of prices.
+ \end{enumerate}
+\end{document}

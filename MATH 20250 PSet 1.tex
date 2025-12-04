@@ -1,0 +1,297 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\id}{\mathsf{id}}
+
+\renewcommand{\phi}{\varphi}
+
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+	
+	\bigskip 
+}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\newcommand{\hide}[1]{{\color{red} #1}} 
+\newcommand{\com}[1]{{\color{blue} #1}} 
+\newcommand{\meta}[1]{{\color{green} #1}} 
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\title{Abstract Linear Algebra, Sections 41 \& 51, Autumn 2025, PSet 1} 
+\date{10/6/25}
+\author{Ellis Garver}
+\maketitle
+\item[]
+This homework is due {\bf October 6}, midnight. The total grade is 30 points. 
+\item Please upload your solution on Canvas/Gradescope.
+
+\begin{enumerate}
+
+\item Let $\bbF$ be a field. Prove the following facts from the field axioms.
+\begin{enumerate}
+
+\item (\emph{2 points}) For any element $a \in \bbF$, the additive inverse $-a$ is unique.
+\item[] Suppose $b$ and $c$ are both additive inverses of $a \in \bbF$, then $a+b=0$ and $a+c=0$.
+\item[] Then: $b=b+0=b+(a+c)=(b+a)+c=0+c=c$.
+\item[] Therefore, $b=c$, and the additive inverse of $a$ is unique.
+\item (\emph{1 point}) For any non-zero element $a \in \bbF$, the multiplicative inverse $a^{-1}$ is unique.
+\item[] Suppose $b$ and $c$ are both multiplicative inverses of $a$ such that $ab=1$ and $ac=1$.
+\item[] Then: $b=b\cdot1=b(ac)=(ab)c=1\cdot c=c$.
+\item[] Therefore, $b=c$, and the multiplicative inverse of $a$ is unique.
+\item (\emph{2 points}) For all $a\in \bbF$, we have $(-1) \cdot a = -a$.
+\item[] Suppose $0=1+(-1)$.
+\item[] Then: $0\cdot a=1\cdot a+(-1)\cdot a\Rightarrow
+a+(-1)\cdot a=0\Rightarrow\ (-1)\cdot a=-a$.
+\item[] Therefore, $(-1)\cdot a=-a$ is the additive inverse of a.
+\item (\emph{2 points}) If $ab=0$ for $a,b\in \bbF$, then either $a=0$ or $b=0$.
+\item[] Assume $a\neq 0$ and that $a$ has multiplicative inverse $a^{-1}$.
+\item[] Then: $b=a^{-1}(ab)=(a^{-1}a)b=1\cdot b=b=a^{-1}\cdot 0=0$.
+\item[] Therefore, $b=0$ when $a\neq 0$. The opposite also holds.
+\end{enumerate}
+
+\item Find all complex roots of the following equations. You must present roots in the form $a+bi$, where $a,b\in \bbR$. Justify your answer!
+
+\begin{enumerate}
+\item (\emph{1 point}) $z^2=2+i\sqrt{12}$;
+\item[] $z^2=2+2i\sqrt{3}$. Let $z=a+bi \Rightarrow\ z^2=(a+bi)^2=a^2-b^2+2abi$.
+\item[] Then, \begin{cases}
+    $a^2-b^2=2 \\ 2ab=2\sqrt{3}$
+\end{cases} \Rightarrow\ $$b=\frac{\sqrt{3}}{a}$$. \text{ Substitution yields } $$a=\pm \sqrt{3}$$.
+\item[] If $a=\sqrt{3}, b=1$. If $a=-\sqrt{3}, b=-1$. Therefore, roots: $z=\sqrt{3}-i$ or $z=-\sqrt{3}+i$.
+\item (\emph{1 point}) $z^2=3+4i$;
+\item[] \begin{cases}
+    $a^2-b^2=3 \\ 2ab=4$
+\end{cases} \Rightarrow\ $$b=\frac{2}{a}$$. \text{ Substitution yields } $$a=\pm 2$$.
+\item[] If $a=2, b=1$. If $a=-2, b=-1$. Therefore, roots: $z=2+i$ or $z=-2-i$.
+\item (\emph{1 point}) $z^2-4iz-(7+4i)=0$.
+\item[] Using quadratic formula, discriminant = $\sqrt{12+16i}$.
+\item[] Then, \begin{cases}
+    $a^2-b^2=12 \\ 2ab=16$
+\end{cases} \Rightarrow\ $$b=\frac{8}{a}$$. \text{ Substitution yields } $$a=\pm 4$$.
+\item[] If $a=4, b=2$. If $a=-4, b=-2$.
+\item[] Return to the quadratic formula, $z=\frac{4i\pm (4+2i)}{2}$. Therefore roots: $z=2+3i$ or $z=-2+i$.
+\end{enumerate}
+
+\item Let $n$ be a natural number and let $k$ be either $0$ or a natural number with $k\leq n.$ Define
+$$ \binom{n}{k}=\frac{n!}{k!(n-k)!},$$
+where $k!=1\times 2\times\times\cdots \times k,$ for $k\geq 1,$ and $0!=1.$
+
+\begin{enumerate}
+\item (\emph{1 point}) Show that 
+$$\binom{n}{k}=\binom{n-1}{k} + \binom{n-1}{k-1},$$
+for all $n,k\in\bbN$. 
+\item[] Algebraically: $\binom{n-1}{k}+\binom{n-1}{k-1}=\frac{(n-1)!}{k!(n-1-k)!}+\frac{(n-1)!}{(k-1)!(n-k)!}=\frac{(n-1)!(n)}{k!(n-k)!}=\frac{n!}{k!(n-k)!}=\binom{n}{k}$
+\item (\emph{3 point}) Show that 
+$$
+(x+y)^n  = \sum_{k=0}^n  \binom{n}{k} x^{n-k}y^k,$$
+for all $n\in\bbN$.
+\item[] Proof by induction on $n$: Base case for $n=0$: $(x+y)^0=1=\sum ^0 _{k=0}\binom{0}{0}x^0y^0$, holds. Assume the formula holds for a fixed $n-1$: $(x+y)^{n-1}=\sum ^{n-1} _{k=0} \binom{n-1}{k}x^{n-1-k}y^k$. 
+\item[] Proof: $(x+y)^2=(x+y)\cdot(x+y)^{n-1}$ \Rightarrow\ $(x+y)^n=(x+y)\cdot\sum ^{n-1} _{k=0} \binom{n-1}{k}x^{n-1-k}y^k$ \Rightarrow\ $(x+y)^n=\sum ^{n-1} _{k=0} \binom{n-1}{k}x^{n-k}y^k+\sum ^{n-1} _{k=0} \binom{n-1}{k}x^{n-1-k}y^{k+1}$. Let $i=k+1, 1\leq j\leq n$. The second sum can be rewritten as $\sum^n _{j=1}\binom{n-1}{j-1}x^{n-j}y^j$. From part (a), we know that $\binom{n-1}{k}+\binom{n-1}{k-1}=\binom{n}{k}.$ Therefore, the expression holds $(x+y)^2=\sum^n _{k=0} \binom{n}{k}x^{n-k}y^k$.
+\item[] By induction, the theorem holds for all $n\geq 0$.
+\end{enumerate}
+
+\item Let $n,k \in \bbN$ be natural numbers. We say that $n$ is \emph{divisible by} $k$ if there is $m \in \bbN$ such that $n=km$. Recall that a natural number $p\in \bbN$ is \emph{prime} if $p\geq 2$ and it is not a product of two smaller natural numbers. In other words, $p$ is prime if the identity $p=ab$, $a,b\in\bbN$ implies that either $a=1$ or $b=1$. Fix a prime $p$.
+
+\begin{enumerate}
+\item (\emph{3 points}) Show that the binomial coefficient $\binom{p}{k}$ is divisible by $p$ for all $1\leq k\leq p-1$. {\it Hint: Use Euclid's lemma: If a prime $p$ divides the product $ab$ of two integers $a$ and $b$, then $p$ must divide at least one of those integers $a$ or $b$.}
+\item[] $\binom{p}{k}=\frac{p!}{k!(p-k)!},$ can be rewritten as $p!=\binom{p}{k}(k!(p-k)!)$.
+\item[] Since $p$ divides $p!$ and gcd($p, k!(p-k)!$)$=1$, Euclid's lemma implies that $p$ must divide the other factor, $\binom{p}{k}$. Hence, $\binom{p}{k}$ is divisible by $p$ for all $1\leq k \leq p-1$.
+\item (\emph{4 points}) Prove that $n^p-n$ is divisible by $p$ for all $n\in \bbN$.
+\item[] From (a), each binominal coefficient in the expansion $(a+b)^p,$ except the first and last, is a multiple of $p$. By the binomial theorem: $(a+b)^p=\sum ^p _{k=0} \binom{p}{k}a^{p-k}b^k$. Hence, each middle term is congruent to 0 modulo $p$. This can be simplified to the equation $(a+b)^p\equiv a^p+b^p$ (mod $p$). Set $a=n,$ and $b=1$. Then, $(n+1)^p\equiv n^p+1^p\equiv n^p+1$ (mod $p$). This can further be expanded to show $(n+1)^p-(n+1)\equiv n^p-n$ (mod $p$). Conclusively, for each $n$, $n^p\equiv n$ (mod $p$), which means $n^p-n$ is divisible by $p$.
+\item (\emph{4 points}) Fix a natural number $n$ which is \emph{not} divisible by $p$. Show that there exists a natural number $m$ such that $mn-1$ is divisible by $p$.
+\item[] Since $p$ is prime, and $n$ is not divisible by $p$, gcd($n,p$) $=1$. By Bezout's lemma, if gcd($a,b$) $=1$, then there exist integers, $m,t$ such that $ma+tb=1$. Suppose $a=n, b=p$. Then $mn+tp=1$ for some integers $m,t$. Reducing by modulo $p$ leaves $mn\equiv 1$ (mod $p$).
+\end{enumerate}
+
+\iffalse
+\item Let $p$ be a prime number and let $\mathbb{F}_p=\{0,1,2,\dots, p-1\}$. We can define addition, subtraction, and multiplication in the set $\mathbb{F}_p$ according to the following rule: first add/subtract/multiply the integers $a,b\in\mathbb{F}_p$ together, and then take the remainder after division by $p$. 
+
+\textbf{Example.} In $\mathbb{F}_5$, we have $3+2=0$, $3-4=4$, and $3\cdot 2 = 1$. 
+
+\begin{enumerate}
+\item (\emph{2 points}) Prove that $(\bbF_p,+,\cdot)$ is a field. You can use the previous problem.
+\item (\emph{4 points}) Construct a field with exactly $4$ elements.
+\end{enumerate}
+\fi
+
+\item Solve the following quadratic equations in the field $\mathbb{F}_p$, i.e. find all possible roots or show that the equation has no any solutions. Justify your answer!
+
+\begin{enumerate}
+\item (\emph{1 point}) $x^2= -1$, $p=7$;
+\item[] $x^2\equiv-1\equiv6$ (mod $7$)
+\item[] 0... $p-1$ squares modulo 7: $0^2=0, 1^1=1, 2^2=4, 3^2=2, 4^2=2, 5^2=4, 6^2=1$
+\item[] The set of quadratic residues is \{0,1,2,4\}. There is no solution.
+\item (\emph{1 point}) $x^2=-1$, $p=13$;
+\item[] $x^2\equiv-1\equiv12$ (mod $13$)
+\item[] 0... $p-1$ squares modulo 13: $0^2=0, 1^1=1, 2^2= 4, 3^3= 9, 4^2=4, 5^2=12, 6^2=8, 7^2=10, 8^2=12, 9^2=3, 10^2=9, 11^2=4, 12^2=1$
+\item[] The set of quadratic residues is \{0,1,4,9,8,10,12\}. Solutions are $x\equiv5,8$ (mod 13).
+\item (\emph{1 point}) $x^2=5$, $p=11$;
+\item[] $x^2\equiv5\equiv-6$ (mod $11$)
+\item[] 0... $p-1$ squares modulo 11: $0^2=0,1^2=1,2^2=4,3^2=9,4^2=5,5^2=3,6^2=3,7^2=5,8^2=9,9^2=4,10^2=1$
+\item[] The set of quadratic residues is \{0,1,2,3,4,5,9\}. Solutions are $x\equiv4,7$ (mod 11).
+\item (\emph{1 point}) $x^2+x-1=0$, $p=11$;
+\item[] $x^2+x-1\equiv0$ (mod 11)
+\item[] Discriminant: $1+4=5$. From (c), $4^2\equiv5$, so $\sqrt{5}\equiv\pm 4$ (mod 11). 
+\item[] Therefore, roots are $x\equiv\frac{-1\pm4}{2}$ (mod 11).
+\item[] $2m\equiv1$ (mod 11) \Rightarrow\ $2^{-1}$ (mod 11) $\equiv6$ (mod 11) finds a multiplicative inverse.
+\item[] Simplifying: $x\equiv6\cdot(-1+4)=6\cdot3\equiv18\equiv7$ , and $x\equiv6\cdot(-1-4)=6\cdot-5\equiv-30\equiv3$.
+\item (\emph{1 point}) For any $p > 2$, show that there are exactly $\frac{p+1}{2}$ elements $x\in \mathbb{F}_p$ with $x=y^2$ for some $y \in \mathbb{F}_p$.
+\item[] Squares in $\bbF _p$: 0 is a square. For non-zero $y\in \bbF ^x _p$, the map $y\mapsto y^2$ pairs $y$ with $-y$ and $y^2$ with $(-y)^2$. Since $p>2$, $y\neq-y$ for $y\neq0$. Therefore, $(p-1)$ non-zero squares group into $(p-1)/2$ pairs \{$y,-y$\}. Including 0, gives the total number of squares: $1+\frac{p-1}{2}=\frac{p+1}{2}$.
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,304 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\id}{\mathsf{id}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\Char}{\mathrm{char}}
+
+\renewcommand{\phi}{\varphi}
+
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+	
+	\bigskip 
+}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\newcommand{\hide}[1]{{\color{red} #1}} 
+\newcommand{\com}[1]{{\color{blue} #1}} 
+\newcommand{\meta}[1]{{\color{green} #1}} 
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\head{Abstract Linear Algebra, Sections 41\&51, Autumn 2025\\ HOMEWORK 6} 
+
+This homework is due to {\bf November 17}, midnight. The total grade is 30 points. Please upload your solution on Canvas/Gradescope.
+
+\begin{enumerate}
+
+\item Let $V$ be a vector space over a field $\mathbb{F}$. The vector space $\mathcal{L}(V,\mathbb{F})$ of all linear transformations $\varphi\colon V\to\mathbb{F}$ (which are often called \emph{linear functionals} because the target vector space is $\mathbb{F}$) is called the \emph{dual space} of $V$, often denoted $V^*$. 
+
+\begin{enumerate} 
+
+\item(\emph{3 points}) Suppose the vectors $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n$ form a basis of $V$. For each $1 \leq i\leq n$, we define a linear functional $\phi_i \colon V \to \bbF$ as follows $$\phi_i(\mathbf{v})=\alpha_i \;\; \text{if} \;\; \mathbf{v}=\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2+\cdots+\alpha_n\mathbf{v}_n\in V.$$
+
+Show that linear functionals $\phi_i\colon V \to \bbF$ are well-defined and form a basis of $V^*$. In particular, $\dim_\bbF(V) =\dim_{\bbF}(V^*)$.
+\item[] Well-defined: For each $i$, $\varphi(\alpha_1\mathbf{v}_1+\ldots+\alpha _n\mathbf{v_n})=\alpha_i$. Then $\mathbf{v}\in V$ has a unique representation $\mathbf{v}=\sum_{j=1}^n\alpha _j\mathbf{v}_j$ because $\{\mathbf{v_j}\}$ forms a basis over $V$. Therefore, $\alpha_i$ is uniquely determined and $\varphi_i$ is both unambiguous and well-defined.
+\item[] Linearity: For $u,w\in V$ with coordinates $u=\sum\beta \mathbf{v}_j$, $w=\sum\gamma \mathbf{v}_j$ and a scalar $c\in\bbF$, $\varphi_i(u+cw)=\varphi_i(\sum_j(\beta +c\gamma)\mathbf{v}_j)=\beta_i+c\gamma_i=\varphi_i(u)+c\varphi_i(w)$, so each $\varphi_i$ is linear.
+\item[] Basis of $V^*$: Let $\varphi\in V^*$, and scalars $a_j:=\varphi(\mathbf{v}_j)$ for $j=1,2,\ldots,n$. Then, for any $v=\sum a_j\mathbf{v}_j$, $\sum_{j=1}^na_j\varphi_j(\mathbf{v})=\sum_{j=1}^na_j\alpha_j=\varphi(\sum_{j=1}^na_j\mathbf{v}_j)=\varphi(\mathbf{v})$. So $\{\varphi\}$ spans $V^*$. Further, suppose $\sum_{j=1}^nb_j\varphi_j=0$, then $0=(\sum_{j=1}^nb_j\varphi_j)\mathbf{v}_k=\sum_{j=1}^nb_j\varphi_j(\mathbf{v}_k)=\sum_{j=1}^nb_j\delta_{jk}=b_k$. Thus, all $b_k=0$ and $\varphi_j$ are linearly independent vectors.
+\item[] $\Rightarrow \{\varphi_1,...,\varphi_n\}$ is also basis of $V^*$ where $\dim_\bbF V^*=n=\dim_\bbF V$.
+
+\item (\emph{2 point}) Let $\mathbf{v} \in V$ be a vector. We define a function $\iota_{\mathbf{v}} \colon V^* \to \bbF$ as follows
+$$\iota_{\mathbf{v}}(\phi) = \phi(\mathbf{v}), \;\; \phi\in V^*,$$
+i.e. $\iota_{\mathbf{v}}$ evaluates a linear functional $\phi \in V^*$ at the fixed vector $\mathbf{v}\in V$. Show that $\iota_\mathbf{v} \in (V^*)^*$, i.e. $\iota_\mathbf{v}$ is a linear functional on the \emph{dual} space $V^*$.
+\item[] For $\phi, \psi\in V^*$ and scalar $c$: $\iota_\mathbf{v}(\phi+c\psi)=(\phi+c\psi).(\mathbf{v})=\phi(\mathbf{v})+c\psi(\mathbf{v})=\iota_\mathbf{v}(\phi)+c\iota_\mathbf{v}(\psi)$. Thus, $\iota_\mathbf{v}$ is linear and $\iota_\mathbf{v}\in\mathcal{L}(V^*,\bbF)=(V^*)^*$.
+
+\item (\emph{2 points}) Show that the function $\iota \colon V\to (V^*)^*$ which sends a vector $\mathbf{v}\in V$ to the linear functional $\iota_\mathbf{v}\in (V^*)^*=\mathcal{L}(V^*, \mathbb{F})$ is an injective linear transformation.
+\item[] For $u,w\in V$ and scalar $c$: $\iota_{v+cw}(\phi)=\phi(u+cw)=\phi(u)+c\phi(w)=\iota_u(\phi)+c\iota_{w}(\phi)$. Thus, $\iota_\mathbf{v}$ is linear. Consider the zero functional in $(V^*)^*$ where $\iota_\mathbf{v}(\phi)=\phi(\mathbf{v})=0\; \forall\; \phi\in V^*$. If $\mathbf{v}\neq0$, extend $\{v\}$ to a basis $\{\mathbf{v}_,\mathbf{v}_2,\ldots,\mathbf{v}_n\}$ of $V$. Define $\psi\in V^*$ by $\psi(\mathbf{v})=1$ and $\psi(\mathbf{v}_j)=0$ for $j\geq 2$. Then, $\psi(\mathbf{v})=1\neq0$, contradicting $\phi(\mathbf{v})=0\;\forall\;\phi$. Thus, $\mathbf{v}=0$, proving the only vector mapped to 0 is 0, so $\iota$ is an injective and linear transformation.
+
+\item (\emph{2 points}) Suppose that $V$ is a finite dimensional vector space. Show that the linear transformation $\iota \colon V \to (V^*)^*$ is an isomorphism. 
+
+{\it Fact: }If $V$ is infinite dimensional, then $V\not\cong V^*$. For instance, let $V=\bbR[t]$ be the vector space of polynomials with coefficients in $\mathbb{R}$. Then the vector space $V^*$ contains an \emph{uncountably infinite} list of linearly independent vectors, and hence $V\not\cong V^*$.
+\item[] From (a), $\dim_\bbF V=\dim_\bbF V^*=n$. Then $\dim_\bbF (V^*)^*=\dim_\bbF V^*=n$. Thus we have a linear injection. Further, $\iota:V\to (V^*)^*$, the linear injection between two finite dimensional vector spaces with equal dimension is necessarily surjective, hence an isomorphism.
+
+\end{enumerate}
+
+\item (\emph{2 points}) Use the Rank-Nullity Theorem to prove the following fact. Let $W\subseteq V$ be a subspace of a finite-dimensional vector space $V$. If there exists a linear transformation $T\colon V\to U$ with $\ker(T)=W$, then it must be the case that $\dim_{\bbF}(W)\geq \dim_{\bbF}(V)-\dim_{\bbF}(U)$.
+\item[] By Rank-Nullity on $T$: $\dim_\bbF (V)=\dim_\bbF \ker(T)+\dim_\bbF \text{im}(T)$. Here $\dim_\bbF \ker(T)=\dim_\bbF(W)$, so $\dim_\bbF (V)=\dim_\bbF (W)+\dim_\bbF \text{im}(T)\Rightarrow\dim_\bbF (W)=\dim_\bbF (V)-\dim_\bbF\text{im}(T)$. Since $\text{im}(T)\subseteq U$, $\dim_\bbF \text{im}(T)\leq\dim_\bbF (U)$, so $\dim_\bbF (W)\geq\dim_\bbF (V)-\dim_\bbF(U)$, verifying statement above.
+
+\item Let $A_n$ be the $n \times n$ matrix that has $2$ on the diagonal, and 1 on both sides of the diagonal in such a way that they wrap around. For instance, if $n=5$, then $A_5$ would be the matrix
+\[
+\begin{bmatrix}
+2 & 1 & 0 & 0 & 0 \\
+1 & 2 & 1 & 0 & 0 \\
+0 & 1 & 2 & 1 & 0 \\
+0 & 0 & 1 & 2 & 1 \\
+0 & 0 & 0 & 1 & 2 
+\end{bmatrix} \in M_{5\times 5}(\bbR).
+\]
+
+\begin{enumerate}
+\item (\emph{1 point}) Find $\det(A_2)$.
+\item[] $\det(A_2)=\det(\begin{bmatrix}
+    a&b\\c&d
+\end{bmatrix})=\det(\begin{bmatrix}
+    2&1\\1&2
+\end{bmatrix})=ad-bc=2\cdot2-1\cdot1=3$.
+\item (\emph{2 points})  Find $\det(A_3)$.
+\item[] $\det(A_3)=\det(\begin{bmatrix}
+    2&1&0\\1&2&1\\0&1&2
+\end{bmatrix})=2\det(\begin{bmatrix}
+    2&1\\1&2
+\end{bmatrix})-1\det(\begin{bmatrix}
+    1&0\\1&2
+\end{bmatrix})+0\det(\begin{bmatrix}
+    1&0\\2&1
+\end{bmatrix})$
+\item[] $=2(2\cdot2-1\cdot1)-1(1\cdot2-1\cdot0)+0(1\cdot1-2\cdot0)=2(3)-1(2)-0(1)=4$.
+\item (\emph{4 points}) Use a Laplace expansion to calculate $\det(A_n)$ for each $n$.
+\item[] Expand $\det(A_n)$ along the last row. The last row has entries $0,\ldots,0,1,2$ with 1 in the $n-1$ position and 2 in the $n$ position. Expansion yields $\det(A_n)=2\cdot\det(A_{n-1})-1\cdot C$ where $C$ is the cofactor corresponding to the $(n,n-1)$ entry. Removing row $n$ and column $n-1$ gives a matrix whose determinant is $\det(A_{n-2})$. So, $\det(A_n)=2\det(A_{n-1})-\det(A_{n-2})$.
+\item[] Base cases: $\det(A_1)=2,\; \det(A_2)=3$. For $n\geq3$, $\det(A_n)=2\det(A_{n-1})-\det(A_{n-2})$. 
+\item[] Consider $\det(A_n)=(n+1)$ for all $n$. 
+\item[] Compute: $2\det(A_{n-1})-\det(A_{n-2})=2((n-1)+1)-((n-2)+1)=2n-n+1=n+1$.
+\item[] Since base cases match, by induction, $\det(A_n)=n+1$ for all $n\geq1$.
+\end{enumerate}
+
+\item Let $c_0, c_1, \dots, c_n\in\mathbb{R}$ be scalars and consider the $(n+1)\times (n+1)$ matrix
+$$A=\begin{bmatrix} \;1 & c_0 & c_0^2 & \cdots & c_0^{n}\\[4pt] \;1 & c_1 & c_1^2 & \cdots & c_1^{n}\\[4pt] \;\vdots & \vdots & \vdots & \ddots & \vdots\\[4pt] \;1 & c_n & c_n^2 & \cdots & c_n^{n}\end{bmatrix} \in M_{(n+1)\times (n+1)}(\mathbb{R}).$$
+This matrix is often called a \emph{Vandermonde matrix}. The goal of this problem is to prove the formula
+$$\det(A)=\prod_{0\leq j<k\leq n}(c_k-c_j).$$
+To do this, we outline a proof by induction:
+
+\begin{enumerate}
+
+\item (\emph{1 point}) Check that the formula holds if $n=1$: 
+$$\det\begin{bmatrix} 1 & c_0\\ 1 & c_1\end{bmatrix} =\prod_{0\leq j<k\leq 1}(c_k-c_j)=(c_1-c_0)$$
+\item[] $\det(\begin{bmatrix}
+    1&c_0\\1&c_1
+\end{bmatrix})=1\cdot c_1-1\cdot c_0=c_1-c_0=$ the product given above.
+
+%\item[(b)] (\emph{3 points}) Check that the formula holds if $n=2$:
+%$$\det\begin{bmatrix} 1 & c_0 & c_0^2\\[4pt] 1 & c_1 & c_1^2\\[4pt] 1 & c_2 & c_2^2\end{bmatrix}=\prod_{0\leq j<k\leq 2}(c_k-c_j)=(c_1-c_0)(c_2-c_0)(c_2-c_1).$$
+
+\item (\emph{3 points}) Rename the variable $c_n$ in the last row $x$. Show that
+$$\det\begin{bmatrix} 1 & c_0 & c_0^2 & \cdots & c_0^{n}\\[4pt] 1 & c_1 & c_1^2 & \cdots & c_1^{n}\\[4pt] \vdots & \vdots & \vdots & \ddots & \vdots\\[4pt] 1 & x & x^2 & \cdots & x^{n}\end{bmatrix}$$
+can be written as $p(x)=a_0+a_1x+\cdots+a_nx^n$ (i.e., as a polynomial of degree $n$ in the variable $x$), where $a_0, a_1, \dots, a_n \in \mathbb{R}$ depend on $c_0, c_1, \dots, c_{n-1}$. You do not need to find explicit expressions for $a_0, a_1, \dots, a_n$. \emph{Hint: Laplace expansion along a certain row.}
+\item[] Expanding this determinant along the last row writes $p(x)=a_0+a_1x+\ldots+a_nx^n$ because each cofactor is independent of $x$. $p(x)$ is a polynomial of at most degree $n$. The leading coefficient $a_n$ is the cofactor of the $x^n$ entry which equals the determinant of the $n\times n$ matrix consisting of columns $1,c_j,\ldots,c_j^{n-1}$ for $j=0,\ldots,n-1$.
+
+\item (\emph{2 points}) Let $p(x)$ be the polynomial in part (b). Show that
+$$p(c_0)=p(c_1)=\cdots=p(c_{n-1})=0.$$
+and $p(x)$ factors as $p(x)=a_n(x-c_0)(x-c_1)\cdots(x-c_{n-1})$.
+\item[] Suppose $x=c_i$ for $i\in\{0,\ldots,n-1\}$. Then two rows of the matrix, row $i+1$ and the last row, become identical (dependent) and equal to $(1,c_i,c_i^2,\ldots,c_i^n)$. Determinant of two equal rows is 0. Hence, $p(c_i)=0$ for each $i$. Further, $x=c_0,\ldots,c_n-1$ are roots of $p(x)$. Since $p$ has at most degree $n$ with $n$ distinct roots, $p(x)$ factors are $a_n\prod^{n-1}_{i=0}(x-c_i)$.
+
+\item (\emph{4 points}) Inductive step: assuming that the formula for the determinant of a Vandermonde matrix holds is true for $n-1$, compute the number $a_n$ and then prove the formula for $n$. \emph{Hint: Compute $a_n$ in two ways.}
+\item[] Set $x=c_n$. Then $p(c_n)=\det(A)=a_n\prod^{n-1}_{i=0}(c_n-c_i)$. Here, $a_n$ is the determinant of the Vandermonde matrix from $c_0,\ldots,c_{n-1}$, which equals $\det\begin{bmatrix}
+    1&c_0&c_0^2&\ldots&c_0^{n-1}\\1&c_1&c_1^2&\ldots&c_1^{n-1}\\ \vdots&\vdots&\vdots&&\vdots\\1&c_{n-1}&c_{n-1}^2&\ldots&c_{n-1}^{n-1}
+\end{bmatrix}.$ 
+\item[] By induction (assume formula holds for $n-1$), $a_n=\prod_{0\leq j\leq k\leq n-1}(c_k-c_j)$. 
+\item[] By expression: $\det(A)=(\prod_{0\leq j\leq k\leq n-1}(c_k-c_j))\cdot(\prod^{n-1}_{i=0}(c_n-c_i))=\prod_{0\leq j\leq k\leq n}(c_k-c_j)$.
+\item[] This completes induction and proves the Vandermode formula all $n$.
+
+\item (\emph{2 points}) Vandermonde matrices naturally appear within the context of \emph{polynomial interpolation} problems: given distinct points $(x_0, y_0)$, $(x_1, y_1)$, $\dots$, $(x_n, y_n)$ in the plane, how may we find an equation for a polynomial that passes through all of them?
+
+\medskip
+
+Show that if $x_0$, $x_1$, $\dots$, $x_n$ are all distinct, then there is a \emph{unique} polynomial, $p$, of degree $n$ such that 
+$$p(x_0)=y_0,\quad p(x_1)=y_1,\quad \dots,\quad p(x_n)=y_n.$$
+\emph{Hint: You do not need to find explicit expressions for $p$.}
+(This is a generalization of the fact that two distinct points determine a line $y=mx+b$.)
+\item[] Given distinct points, consider the linear system for coefficients $a_0,\ldots,a_n$ of a degree $\leq n$ polynomial $p(x)=a_o+a_1x+\ldots+a_nx^n$: $\begin{bmatrix}
+    1&x_0&x_0^2&\ldots&x_0^n\\1&x_1&x_1^2&\ldots&x_1^n\\ \vdots&\vdots&\vdots&&\vdots\\ 1&x_n&x_n^2&\ldots&x_n^n
+\end{bmatrix}\cdot\begin{bmatrix}
+    a_o\\a_1\\ \vdots\\a_n
+\end{bmatrix}=\begin{bmatrix}
+    y_1\\y_2\\ \vdots\\y_n
+\end{bmatrix}$. The coefficient matrix is the Vandermonde matrixwith entries $x_k^j$. $\det=\prod_{0\leq j\leq k\leq n}(x_k-x_j)$. Since $x_i$ are distinct, each factor $x_k-x_j$ is non-zero, so the determinant is also non-zero. Hence the Vandermonde matrix is invertible and the linear system has a unique solution $(a_0,\ldots,a_n)$ with a unique polynomial $p$ of degree $\leq n$ corresponding the points.
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,262 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\id}{\mathsf{id}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\Char}{\mathrm{char}}
+
+\renewcommand{\phi}{\varphi}
+
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+	
+	\bigskip 
+}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\newcommand{\hide}[1]{{\color{red} #1}} 
+\newcommand{\com}[1]{{\color{blue} #1}} 
+\newcommand{\meta}[1]{{\color{green} #1}} 
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\head{Abstract Linear Algebra, Sections 41\&51, Spring 2025\\ HOMEWORK 7} 
+
+This homework is due to {\bf December 3}, midnight. The total grade is 30 points. Please upload your solution on Canvas/Gradescope.
+
+\begin{enumerate}
+
+\item Let $A\in M_{n\times n}(\bbF)$ be a square matrix. The \emph{trace} $\tr(A)$ of $A$ is the sum
+$$\tr(A) = \sum_{i=1}^n a_{ii} =a_{11}+ a_{22}+\ldots + a_{nn} $$
+of its diagonal enrtries.
+\begin{enumerate}
+\item (\emph{1 point}) Find a $2\times 2$-matrix $A \in M_{2\times 2}(\bbF)$ such that $\tr(A^2)\neq \tr(A)^2$.
+\item[] $A=\begin{bmatrix}
+    0&1\\0&0
+\end{bmatrix}\Rightarrow A^2=\begin{bmatrix}
+    0&0\\0&0
+\end{bmatrix}, \;\tr(A^2)=0\neq \tr(A)^2=1^2$.
+\item (\emph{2 points}) Show that $\tr(AB) = \tr(BA)$ for any matrices $A \in M_{n\times m}(\bbF)$ and $B \in M_{m\times n}(\bbF)$. Note that $m$ is not necessary equal to $n$.
+\item (\emph{2 points}) Find three matrices $A,B,C$ such that $\tr(ABC) \neq \tr(BAC)$.
+\item[] $A=\$
+\item (\emph{1 point}) Show that $\tr(C^{-1}AC)=\tr(A)$ for any square matrix $A \in M_{n\times n}(\bbF)$ and any invertible matrix $C \in M_{n\times n}(\bbF)$.
+\item (\emph{2 points}) Let $f\colon V \to V$ be an endomorphism and let $\mathcal{A}=\{v_1,\ldots, v_n\}$, $\mathcal{A}'=\{v'_1,\ldots, v'_n\}$ be bases of $V$. Show that
+$$\tr([f]_{\mathcal{A}\mathcal{A}}) = \tr([f]_{\mathcal{A}'\mathcal{A}'}). $$
+In other words, the trace of an endomorphism does not depend on the choice of a basis of $V$.
+\end{enumerate}
+
+\item Let $A=\begin{bmatrix} 4 & 0 & 1 & 0\\ 2 & 2 & 3 & 0\\ -1 & 0 & 2 & 0\\ 4 & 0 & 1 &2\end{bmatrix}$.
+
+\begin{enumerate}
+
+\item (\emph{1 point}) Find all \emph{real} eigenvalues of $A$.
+
+\item (\emph{2 points}) For each eigenvalue, $\lambda$, that you found in part (a), find a basis for the corresponding eigenspace, $E_{\lambda}$. 
+
+\item (\emph{2 points}) If possible, diagonalize $A$ over $\mathbb{R}$. If this is not possible, then explain why not.
+
+\end{enumerate}
+
+\item Let $A=\begin{bmatrix} -1 & 2\\ 3 & 4\end{bmatrix} \in M_{2\times 2}(\bbR)$.
+
+\begin{enumerate}
+
+\item(\emph{1 point}) Let $t$ be a formal variable. Find the characteristic polynomial $\det(A-tI_2)$ and the eigenvalues of $A$.
+
+\item (\emph{1 point}) Use your answer in the previous part to find the eigenvectors of $A$ of each eigenvalue.
+
+\item (\emph{1 point}) Use your answer in the previous part to find an invertible matrix $C \in M_{2\times 2}(\bbR)$ and a diagonal matrix $B \in M_{2\times 2}(\bbR)$ such that $A=CBC^{-1}$
+
+\item (\emph{2 points}) Use your answer to part $A$ to calculate $A^{51}$. (For clarity, you can leave any exponentials written as exponentials.)
+
+\item (\emph{2 points}) Find all ``square roots'' of $A$; i.e., find all (possibly complex) matrices $B$ such that $B^2=A$.
+
+\end{enumerate}
+
+\item
+
+Let $L \colon \mathbb{C}^n \to \mathbb{C}^n$ be the linear transformation that cyclically permutes the coefficients of the vector: 
+\[
+L(a_1,a_2,\dots,a_n) = (a_2, \dots, a_{n}, a_1).
+\]
+\begin{enumerate}
+
+\item (\emph{3 points}) Find the eigenvectors and eigenvalues of $L$. \textit{Hint:} Use the Laplace expansion to compute the characteristic polynomial. 
+
+\item (\emph{1 point}) Find the matrix of $L$ in the standard basis of $\mathbb{C}^n$.
+
+\item (\emph{3 points}) Let $A$ be the $n \times n$ matrix that has $2$ on the diagonal, and 1 on both sides of the diagonal in such a way that they wrap around. For instance, if $n=5$, then $A$ would be the matrix
+\[
+\begin{bmatrix}
+2 & 1 & 0 & 0 & 1 \\
+1 & 2 & 1 & 0 & 0 \\
+0 & 1 & 2 & 1 & 0 \\
+0 & 0 & 1 & 2 & 1 \\
+1 & 0 & 0 & 1 & 2 
+\end{bmatrix}.
+\]
+Find the eigenvalues and eigenvectors of the matrix $A \in \mathrm{Mat}_{n \times n}(\mathbb{C})$ (in general, not just in the case $n = 5$). Simplify your answer as much as possible. \textit{Hint:} Use the previous parts instead of computing the characteristic polynomial. 
+
+\end{enumerate}
+
+\item (\emph{3 points}) Recall that if $V$ is a vector space, then $V^*$ is the dual space of $V$, see Problem 1 in Homework 6. Let $T\colon V \to W$ be a linear transformation. The \emph{dual linear transformation} $T^*\colon W^* \to V^*$ is defined as $$T^*(\phi)=\phi \circ T. $$
+In other words, $T^*(\phi) \in V^*$ is the linear functional such that $(T^*(\phi))(v)=\phi(T(v))$ for any $v\in V$.
+
+Let $\mathcal{A}=\{v_1,\ldots,v_n\} \subset V$ and  $\mathcal{B}=\{w_1,\ldots,w_m\} \subset W$ be bases and let $\mathcal{A}^\vee=\{\phi_1,\ldots,\phi_n\} \subset V^*$ and $\mathcal{B}^\vee=\{\psi_1,\ldots,\psi_m\} \subset W^*$ be the dual bases as in Problem 1a in Homework 6. Show that
+$$[T^*]_{\mathcal{A}^\vee\mathcal{B}^\vee} =([T]_{\mathcal{B}\mathcal{A}})^T \in M_{n\times m}(\bbF)$$
+is the transpose matrix of $T$.
+\end{enumerate}
+
+\end{document}

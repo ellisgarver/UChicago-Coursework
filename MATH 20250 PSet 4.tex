@@ -1,0 +1,264 @@
+\documentclass[11pt]{article}
+\usepackage{color}
+%\input{rgb}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+
+
+
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\newcommand{\id}{\mathsf{id}}
+
+\renewcommand{\phi}{\varphi}
+
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+
+
+\providecommand{\x}{\times}
+
+
+
+
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+
+\newcommand{\head}[1]{
+	\begin{center}
+		{\large #1}
+		\vspace{.2 in}
+	\end{center}
+	
+	\bigskip 
+}
+
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+
+\numberwithin{equation}{subsection}
+
+
+%----------Title-------------
+\newcommand{\hide}[1]{{\color{red} #1}} 
+\newcommand{\com}[1]{{\color{blue} #1}} 
+\newcommand{\meta}[1]{{\color{green} #1}} 
+
+\begin{document}
+
+\pagestyle{plain}
+
+
+%%---  sheet number for theorem counter
+\setcounter{section}{1}   
+
+\head{Abstract Linear Algebra, Sections 41\&51, Autumn 2025\\ HOMEWORK 4} 
+
+This homework is due to {\bf October 27}, midnight. The total grade is 30 points. Please upload your solution on Canvas/Gradescope.
+
+\begin{enumerate}
+
+\item You may assume that each of the functions $T$ given below are linear transformations. In each case, find the matrix of $T$ with respect to the standard basis of each vector space. 
+
+\begin{enumerate}
+
+\item (\emph{2 points}) $T\colon\mathbb{R}^2\to\mathbb{R}^3$; \hspace{1in} $T\begin{bmatrix} x\\ y\end{bmatrix}=\begin{bmatrix} -y\\ 2x\\ x+y\end{bmatrix}$;
+\item[] Basis $=e_1,e_2 \in \bbR^2$. 
+\item[] $T(e_1)=T\begin{bmatrix} 1 \\ 0 \end{bmatrix}=T\begin{bmatrix} 0\\2\\1\end{bmatrix}$, $T(e_2)=T\begin{bmatrix}0\\1\end{bmatrix}T\begin{bmatrix}-1\\0\\1\end{bmatrix}$, therefore $[T]=\begin{bmatrix}
+    0&-1\\ 2&0\\1&1
+\end{bmatrix}$.
+
+\item (\emph{2 points}) $T\colon \bbR[t]_{\leq 3} \to \bbR^3$; \hspace{0.6in} $T(p(t)) = \begin{bmatrix} p(2)\\ p(1) \\ p(-1) \end{bmatrix}$.
+\item[] Basis $=\{1,t,t^2,t^3\}$. 
+\item[] $T(1)=\begin{bmatrix}1\\1\\1\end{bmatrix},\ T(t)=\begin{bmatrix}2\\1\\-1\end{bmatrix},\ T(t^2)=\begin{bmatrix}4\\1\\1\end{bmatrix},\ T(t^3)=\begin{bmatrix}8\\1\\-1\end{bmatrix}$, therefore $[T]=\begin{bmatrix}1&2&4&8\\1&1&1&1\\1&-1&1&-1\end{bmatrix}$.
+
+\end{enumerate}
+
+\item As discussed in class, matrix multiplication is not commutative: in general, $AB$ may not be equal to $BA$. However, given some matrix $A \in M_{n\times n}(\bbF)$, it may be the case that $AB=BA$ for some specific matrix $B \in M_{n\times n}(\bbF)$. In this case, we say that $A$ and $B$ \emph{commute}. 
+
+\begin{enumerate}
+
+\item (\emph{2 points}) Let $A$ be a fixed $n\times n$ matrix with entries in the field $\mathbb{F}$. Show that the subset
+$$W_A=\{B\in M_{n\times n}(\mathbb{F}) \;|\; AB=BA\}\subseteq M_{n\times n}(\mathbb{F}),$$
+which consists of all matrices that commute with $A$, is a subspace of $M_{n\times n}(\mathbb{F})$.  
+\item[] Zero condition: $A0=0A=0$. Therefore, $0\in W_A$.
+\item[] Closure under addition: Suppose $AB_1=B_1A$ and $AB_2=B_2A$.
+\item[] Then, $A(B_1+B_2)=AB_1+AB_2=B_1A+B_2A=(B_1+B_2)A$.
+\item[] Closure under multiplication: Suppose $AB_1=B_1A$.
+\item[] For any $c\in \bbF$, $A(cB_1)=cAB_1=cB_1A=(cB_1)A.$
+
+\item (\emph{3 points}) Let $A=\begin{bmatrix} 1 & 0\\ -1 & 1\end{bmatrix}$. Find a basis for the subspace $W_A$ and determine $\dim_{\bbF}(W_A$).
+\item[] Let $B=\begin{bmatrix}a&b\\c&d\end{bmatrix}$.
+\item[] Then, $AB=\begin{bmatrix}1&0\\-1&1\end{bmatrix}\begin{bmatrix}a&b\\c&d\end{bmatrix}=\begin{bmatrix}a&b\\c-a&d-b\end{bmatrix}$.
+\item[] And, $BA=\begin{bmatrix}a&b\\c&d\end{bmatrix}\begin{bmatrix}1&0\\-1&1\end{bmatrix}=\begin{bmatrix}a-b&b\\c-d&d\end{bmatrix}$.
+\item[] Setting $AB=BA$, $a=a-b\Rightarrow b=0$, $b=b$, $c-a=c-d\Rightarrow a=d$, $d-b=d\Rightarrow b=0$.
+\item[] So, general $B=\begin{bmatrix}a&0\\c&a\end{bmatrix}=aI+c\begin{bmatrix}0&0\\1&0\end{bmatrix}$. Thus, a basis is $\{\begin{bmatrix}1&0\\0&1\end{bmatrix}\begin{bmatrix}0&0\\1&0\end{bmatrix}\}$, in other words includes $I$ and the standard $E_{21}$ with dim($W_A$)$=2$.
+
+\item (\emph{3 points}) Let $A=\begin{bmatrix} a & 0\\ 0 & a\\\end{bmatrix}$ be a diagonal matrix with \emph{equal} diagonal entries $a \in\mathbb{F}$. Find a basis for the subspace $W_A$ and determine $\dim_{\bbF}(W_A$).
+\item[] $A=aI$. Since every matrix commutes with $I$, $W_A=M_{2\times 2}(\bbF)$, and a basis for the space includes all standard $E_{11},E_{12},E_{21},E_{22}$ with dim($W_A$)$=4$.
+
+\item (\emph{3 points}) Let $A=\begin{bmatrix} a & 0\\ 0 & b\\\end{bmatrix}$ be a diagonal matrix with \emph{different} diagonal entries $a\neq b \in\mathbb{F}$. Find a basis for the subspace $W_A$ and determine $\dim_{\bbF}(W_A$).
+\item[] Let $B=\begin{bmatrix}p&q\\r&s\end{bmatrix}$.
+\item[] Then, $AB=\begin{bmatrix}a&0\\0&b\end{bmatrix}\begin{bmatrix}p&q\\r&s\end{bmatrix}=\begin{bmatrix}ap&aq\\br&bs\end{bmatrix}$.
+\item[] And, $BA=\begin{bmatrix}p&q\\r&s\end{bmatrix}\begin{bmatrix}a&0\\0&b\end{bmatrix}=\begin{bmatrix}pa&qb\\ra&sb\end{bmatrix}$.
+\item[] Here $ap=pa,\ aq=qb\Rightarrow (a-b)q=0\Rightarrow q=0,\ br=ra\Rightarrow (b-a)r=0\Rightarrow r=0,\ bs=sb$.
+\item[] So, general $B=\begin{bmatrix}p&0\\0&s\end{bmatrix}=p\begin{bmatrix}1&0\\0&0\end{bmatrix}+s\begin{bmatrix}0&0\\0&1\end{bmatrix}$. Thus, a basis for the space includes the standard $E_{11}$ and $E_{22}$ with dim($W_A$)$=2$.
+
+\end{enumerate}
+
+\item Suppose that $W_1$, $W_2$ are subspaces of a finite-dimensional vector space $V$ over a field $\mathbb{F}$. Define the \emph{sum} of the subspaces $W_1$ and $W_2$ as the subspace
+$$W_1+W_2=\left\{\mathbf{v}\in V \;\;|\;\; \text{$\mathbf{v}=\mathbf{w}_1+\mathbf{w}_2$ for some $\mathbf{w}_1\in W_1$ and $\mathbf{w}_2\in W_2$}\right\}\subset V.$$
+
+\begin{enumerate}
+
+\item[(a)] (\emph{2 points}) Prove that $\dim(W_1+W_2)\leq \dim(W_1)+\dim(W_2)$.
+\item[] Standard dimension formula: dim$(W_1+W_2)$ $=$ dim$(W_1)$ $+$ dim$(W_2)$ + dim$(W_1\cap W_2)$. Since, dim$(W_1\cap W_2)\geq0$, $\dim(W_1+W_2)\leq \dim(W_1)+\dim(W_2)$.
+
+\item[(b)] (\emph{2 points}) Suppose now that the intersection $W_1\cap W_2=\{\mathbf{0}\}$ is the trivial subspace. In this case, the subspace $W_1+W_2$ is often called a \emph{direct sum} and the symbol $W_1\oplus W_2$ is used instead. Prove that
+$$\dim(W_1\oplus W_2)=\dim(W_1)+\dim(W_2).$$
+\item[] If $W_1\cap W_2=\{\mathbf{0}\}$, then dim$(W_1\cap W_2)=0$, so $\dim(W_1\oplus W_2)=\dim(W_1)+\dim(W_2).$
+
+\item[(c)] (\emph{2 points}) Prove that $V=W_1\oplus W_2$ if and only if every vector $\mathbf{v}\in V$ can be written as $\mathbf{v}=\mathbf{w}_1+\mathbf{w}_2$ in a \emph{unique} way. 
+\item[] If $V=W_1\oplus W_2$, then $W_1\cap W_2=\{0\}$. If $v=w_1+w_2=w'_1+w'_2$, then $(w_1-w'_1)=-(w_2-w'_2)\in W_1\cap W_2=\{0\}$. Therefore, $w_1=w'_1$ and $w_2=w'_2$, proving uniqueness.
+
+\item[(d)] (\emph{2 points}) Prove that if $W_1\subseteq V$ is any subspace of $V$, then there exists a subspace $W_2\subseteq V$ such that $W_1\oplus W_2=V$. 
+\item[] If $W_1\subseteq V$, then there will always exist a complementary subspace, $W_2$ such that $V=W_1\oplus W_2$. Construct the basis $B_1$ of $W_1$, and extend it to the basis $B_1\cup B_2$ of $V$, $W_2$. Let $W_2=$ span($B_2$). Then, $V$ must $=W_1\oplus W_2$.
+
+\end{enumerate}
+
+
+\item Let $V$ be a finite-dimensional vector spaces and let $W\subseteq V$ be a subspace of $V$.
+
+\begin{enumerate}
+
+\item (\emph{4 points}) Given a linear transformation $T_0\colon W\to U$, show that there exists a linear transformation $T\colon V\to U$ that satisfies the following: if $\mathbf{w}\in W\subseteq V$, then $T(\mathbf{w})=T_0(\mathbf{w})$. Be sure to prove that the linear transformation $T$ that you come up with really is a linear transformation. (We may think of $T$ as an \emph{extension} of the linear transformation $T_0$ to one that is defined on all of $V$.)
+\item[] Extending $T_0: W\to U$ to find $T:V\to U$: Choose a basis $\{w_1,\ldots, w_k\}$ for $W$ and extend it to $\{w_1,\dots,w_k,v_1,\dots,v_n\}$ of $V$. Define $T$ on the extended basis: $T(w_i)=T_0(w_i)$ for $i\leq k$, $T(v_j)=T_0(v_j)$ for $j>k$. Then extend $T$ linearly to all vectors in $V$.
+\item[] If $x=\sum\alpha_iw_i+\sum\beta_jv_j$ and $y=\sum\gamma_iw_i+\sum\delta_jv_j$, then $T(x+y)=\sum(\alpha_i+\gamma_i)T_0(w_i)=T(x)+T(y)$ and $T(cx)=cT(x)$, so $T$ is linear and $T(w)=T_0(w)$.
+
+\item (\emph{3 points}) Is the extension $T\colon V\to U$ in part (a) necessarily unique? Either prove that this is the case, or provide a counterexample to show that it is not necessarily unique. 
+\item[] No, the extension does not have to be unique. Different choices for the $v_j$ extension vectors within $T$ produce different extensions. For example, $T_1(x,y)=x$ and $T_2(x,y)=x+y)$ are both valid, linear extensions of a given base transformation $T_0(x,0)=x$, where $V=\bbR^2, W=$ span($\{1,0\})$, and $U=\bbR$.
+
+\end{enumerate}
+
+
+\end{enumerate}
+
+\end{document}
