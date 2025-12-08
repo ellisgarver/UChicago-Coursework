@@ -189,12 +189,27 @@ of its diagonal enrtries.
     0&0\\0&0
 \end{bmatrix}, \;\tr(A^2)=0\neq \tr(A)^2=1^2$.
 \item (\emph{2 points}) Show that $\tr(AB) = \tr(BA)$ for any matrices $A \in M_{n\times m}(\bbF)$ and $B \in M_{m\times n}(\bbF)$. Note that $m$ is not necessary equal to $n$.
+\item[] $\tr(AB)=\sum_{i=1}^n(AB)_{ii}=\sum_{i=1}^n\sum_{j=1}^mA_{ij}B{ji}\Rightarrow\text{Swap order of summation}$
+\item[]$\Rightarrow\sum_{j=1}^m\sum_{i=1}^nB_{ji}A_{ij}=\sum_{j=1}^m(BA)_{jj}=\tr(BA)$. Thus $\tr(AB)=\tr(BA)$.
 \item (\emph{2 points}) Find three matrices $A,B,C$ such that $\tr(ABC) \neq \tr(BAC)$.
-\item[] $A=\$
+\item[] $A=\begin{bmatrix}
+    1&0\\0&0
+\end{bmatrix},\; B=\begin{bmatrix}
+    0&1\\0&0
+\end{bmatrix},\; C=\begin{bmatrix}
+    0&0\\1&0
+\end{bmatrix}\Rightarrow ABC=\begin{bmatrix}
+    1&0\\0&0
+\end{bmatrix},\; BAC=\begin{bmatrix}
+    0&0\\0&0
+\end{bmatrix}.$
+\item[] $\tr(ABC)=1\neq\tr(BAC)=0$.
 \item (\emph{1 point}) Show that $\tr(C^{-1}AC)=\tr(A)$ for any square matrix $A \in M_{n\times n}(\bbF)$ and any invertible matrix $C \in M_{n\times n}(\bbF)$.
+\item[] From (b): $\tr(C^{-1}AC)=\tr((AC)C^{-1})=\tr(A(CC^{-1}))=\tr(A\cdot I)=\tr(A)$.
 \item (\emph{2 points}) Let $f\colon V \to V$ be an endomorphism and let $\mathcal{A}=\{v_1,\ldots, v_n\}$, $\mathcal{A}'=\{v'_1,\ldots, v'_n\}$ be bases of $V$. Show that
 $$\tr([f]_{\mathcal{A}\mathcal{A}}) = \tr([f]_{\mathcal{A}'\mathcal{A}'}). $$
 In other words, the trace of an endomorphism does not depend on the choice of a basis of $V$.
+\item[] Suppose $P$ is the change of basis matrix from $\mathcal{A}$ to $\mathcal{A}'$. Then $\mathcal{A'}=P^{-1}\mathcal{A}P$. By part (d): $\tr(\mathcal{A}')=\tr(P^{-1}\mathcal{A}P)=\tr(\mathcal{A}).$ So trace is independent of basis choice.
 \end{enumerate}
 
 \item Let $A=\begin{bmatrix} 4 & 0 & 1 & 0\\ 2 & 2 & 3 & 0\\ -1 & 0 & 2 & 0\\ 4 & 0 & 1 &2\end{bmatrix}$.
@@ -202,10 +217,27 @@ In other words, the trace of an endomorphism does not depend on the choice of a 
 \begin{enumerate}
 
 \item (\emph{1 point}) Find all \emph{real} eigenvalues of $A$.
-
+\item[] Fourth column is $(0,0,0,2)^T$. Thus, $A=\begin{bmatrix}
+    M&0\\r^T&2
+\end{bmatrix}$, where $M\in\bbR_{3\times 3}$, and $0$ is a $3\times 1$. Then, $\det(A-\lambda I)=\det(M-\lambda I)\cdot(2-\lambda)$. So one eigenvalue is 2. Compute $\det(M-\lambda I)$: $\begin{bmatrix}
+    4-\lambda&0&1\\2&2-\lambda&3\\-1&0&2-\lambda
+\end{bmatrix}\Rightarrow CP=(4-\lambda)((2-\lambda)^2)-1(-1(2-\lambda))=-\lambda^3+8\lambda^2-21\lambda+18\Rightarrow (2-\lambda)(\lambda-3)^2$. Hence eigenvalues over $\bbR$ are 2 (multiplicity 2) and 3 (multiplicity 2).
 \item (\emph{2 points}) For each eigenvalue, $\lambda$, that you found in part (a), find a basis for the corresponding eigenspace, $E_{\lambda}$. 
+\item[] For $\lambda=2$, solve $(A-2I)=\begin{bmatrix}
+    2&0&1&0\\2&0&3&0\\-1&0&0&0\\4&0&1&0
+\end{bmatrix}\Rightarrow\begin{cases}
+    2x_1+1x_3=0\\2x_1+3x_3=0\\-1x_1=0\\4x_1+1x_3=0
+\end{cases}$. $x_1=0\Rightarrow x_3=0$ Eigenspace, $E_2=\{(0,x_2,0,x_4): x_2,x_4\in\bbR\}=\text{span}\{(0,1,0,0)^T,(0,0,0,1)^T\}$.
+\item[] For $\lambda=3$, solve $(A-3I)=\begin{bmatrix}
+    1&0&1&0\\2&-1&3&0\\-1&0&-1&0\\4&0&1&-1
+\end{bmatrix}\Rightarrow\begin{cases}
+    1x_1+1x_3=0\\2x_1-x_2+3x_3=0\\-1x_1-1x_3=0\\4x_1+1x_3-1x_4=0
+\end{cases}$, $x_3=-x_1$ Substitute into (2) $\Rightarrow 2x_1-x_2+3(-x_1)=0\Rightarrow -x_1-x_2=0\Rightarrow x_2=-x_1$
+\item[] Substitute into (4) $\Rightarrow 4x_1+1(-x_1)-1x_4=0\Rightarrow 3x_1-1x_4=0\Rightarrow x_4=3x_1$
+\item[] Eigenspace, $E_3=\{(x_1,-x_1,-x_1,3x_1):x_1\in\bbR\}=\text{span}\{(1,-1,-1,3)^T\}$.
 
 \item (\emph{2 points}) If possible, diagonalize $A$ over $\mathbb{R}$. If this is not possible, then explain why not.
+\item[] To be diagonalizable, the sum of dimensions of eigenspaces must equal the size of $A$ (4). Since $\dim E_2=2$ and $\dim E_3=1$, for a total of 3 linearly independent eigenvectors in the combined eigenspace, $A$ is not diagonalizable over $\bbR$. 
 
 \end{enumerate}
 
@@ -214,14 +246,53 @@ In other words, the trace of an endomorphism does not depend on the choice of a 
 \begin{enumerate}
 
 \item(\emph{1 point}) Let $t$ be a formal variable. Find the characteristic polynomial $\det(A-tI_2)$ and the eigenvalues of $A$.
+\item[] $CP=(-1-t)(4-t)-(2)(3)=t^2-3t-10\Rightarrow(t-5)(t+2)$. Eigenvalues are 5 and $-2$.
 
 \item (\emph{1 point}) Use your answer in the previous part to find the eigenvectors of $A$ of each eigenvalue.
+\item[] $(A-5I)v=0$: $\begin{bmatrix}
+    -6&2\\3&-1
+\end{bmatrix}\Rightarrow\begin{cases}
+    -6x_1+2x_2=0\\3x_1-1x_2=0
+\end{cases}$, $x_2=3x_1\Rightarrow v_5=\text{span}\{(1,3)^T\}$.
+\item[] $(A+2I)v=0$: $\begin{bmatrix}
+    1&2\\3&6
+\end{bmatrix}\Rightarrow\begin{cases}
+    1x_1+2x_2=0\\3x_1+6x_2=0
+\end{cases}$, $x_1=-2x_2\Rightarrow v_{-2}=\text{span}\{(-2,1)^T\}$.
 
 \item (\emph{1 point}) Use your answer in the previous part to find an invertible matrix $C \in M_{2\times 2}(\bbR)$ and a diagonal matrix $B \in M_{2\times 2}(\bbR)$ such that $A=CBC^{-1}$
+\item[] $C=\begin{bmatrix}
+    1&-2\\3&1
+\end{bmatrix}$, $B=\begin{bmatrix}
+    5&0\\0&-2
+\end{bmatrix}$. $\det(C)=1\cdot1-3\cdot-2=7\neq0$, so $A=CBC^-1$.
 
 \item (\emph{2 points}) Use your answer to part $A$ to calculate $A^{51}$. (For clarity, you can leave any exponentials written as exponentials.)
+\item[] $A^{51}=CB^{51}C^{-1}=\frac{1}{7}\begin{bmatrix}
+    1&-2\\3&1
+\end{bmatrix}\begin{bmatrix}
+    5^{52}&0\\0&(-2)^{52}
+\end{bmatrix}\begin{bmatrix}
+    1&2\\-3&1
+\end{bmatrix}$. Set $a=5^{51}$, $b=(-2)^{51}$.
+\item[] $A^{51}=\frac{1}{7}\begin{bmatrix}
+    a&-2b\\3a&b
+\end{bmatrix}\begin{bmatrix}
+    1&2\\-3&1
+\end{bmatrix}=\frac{1}{7}\begin{bmatrix}
+    a+6b&2a-2b\\3a-3b&6a+b
+\end{bmatrix}$.
 
 \item (\emph{2 points}) Find all ``square roots'' of $A$; i.e., find all (possibly complex) matrices $B$ such that $B^2=A$.
+\item[] $B=C\begin{bmatrix}
+    \pm\sqrt{5}&0\\0&\pm i\sqrt{2}
+\end{bmatrix}C^{-1}=\frac{1}{7}\begin{bmatrix}
+    1&-2\\3&1
+\end{bmatrix}\begin{bmatrix}
+    \pm\sqrt{5}&0\\0&\pm i\sqrt{2}
+\end{bmatrix}\begin{bmatrix}
+    1&2\\-3&1
+\end{bmatrix}$. 
 
 \end{enumerate}
 
@@ -234,8 +305,12 @@ L(a_1,a_2,\dots,a_n) = (a_2, \dots, a_{n}, a_1).
 \begin{enumerate}
 
 \item (\emph{3 points}) Find the eigenvectors and eigenvalues of $L$. \textit{Hint:} Use the Laplace expansion to compute the characteristic polynomial. 
+\item[] The characteristic polynomial of $L$ is $t^n-1$ (the permutation matrix of an $n$-cycle). The eigenvalues are the $n$-th roots: $\lambda_k=e^{2\pi ik/n}, k=0,1,\ldots,n-1$. For each $k$, $v^k=(1,\lambda_k,\lambda_k^2,\ldots,\lambda_k^{n-1})^T$. $Lv^k=(\lambda_k,\lambda_k^2,\ldots,\lambda_k^{n-1},\lambda_k^n)^T=\lambda_k(1,\lambda_k,\ldots,\lambda_k^{n-1})^T=\lambda_kv^k$. Thus, $v^k$ is an eigenvector with eigenvector $\lambda_k$. $n$ vectors are ind and form basis for $\bbC^n$.
 
 \item (\emph{1 point}) Find the matrix of $L$ in the standard basis of $\mathbb{C}^n$.
+\item[] $L=\begin{bmatrix}
+    0&1&0&\ldots&0\\0&0&1&\ldots&0\\ \vdots&\vdots&\vdots&\ddots&1\\1&0&0&\ldots&0
+\end{bmatrix}$.
 
 \item (\emph{3 points}) Let $A$ be the $n \times n$ matrix that has $2$ on the diagonal, and 1 on both sides of the diagonal in such a way that they wrap around. For instance, if $n=5$, then $A$ would be the matrix
 \[
@@ -248,6 +323,8 @@ L(a_1,a_2,\dots,a_n) = (a_2, \dots, a_{n}, a_1).
 \end{bmatrix}.
 \]
 Find the eigenvalues and eigenvectors of the matrix $A \in \mathrm{Mat}_{n \times n}(\mathbb{C})$ (in general, not just in the case $n = 5$). Simplify your answer as much as possible. \textit{Hint:} Use the previous parts instead of computing the characteristic polynomial. 
+\item[] $A=2I+L+L^{-1}\Rightarrow Av^k=(2+\lambda_k+\lambda_k^{-1})v^k$, Simplify using $\lambda_k+\lambda_k^{-1}=2\cos(2\pi k/n)$
+\item[] $\Rightarrow \lambda_k=2+2\cos(2\pi k/2)$, $k=0,1,\ldots n-1$. Eigenvectors are the same $v^k$ as above.
 
 \end{enumerate}
 
@@ -257,6 +334,10 @@ In other words, $T^*(\phi) \in V^*$ is the linear functional such that $(T^*(\ph
 Let $\mathcal{A}=\{v_1,\ldots,v_n\} \subset V$ and  $\mathcal{B}=\{w_1,\ldots,w_m\} \subset W$ be bases and let $\mathcal{A}^\vee=\{\phi_1,\ldots,\phi_n\} \subset V^*$ and $\mathcal{B}^\vee=\{\psi_1,\ldots,\psi_m\} \subset W^*$ be the dual bases as in Problem 1a in Homework 6. Show that
 $$[T^*]_{\mathcal{A}^\vee\mathcal{B}^\vee} =([T]_{\mathcal{B}\mathcal{A}})^T \in M_{n\times m}(\bbF)$$
 is the transpose matrix of $T$.
+\item[] By definition of the dual map and evaluation map from HW6(b), for each dual basis element $\psi_i\in\mathcal{B}^\vee$ and each basis vector $v_j\in\mathcal{A}$, $(T^*(\psi_i))(v_j)=\psi_i(T(v_j))$. Now suppose $T(v_j)=\sum_{r=1}^mt_{rj}w_r$. Then $(T^*(\psi_i))(v_j)=\psi_i(\sum_{r=1}^mt_{rj}w_r)=\sum_{r=1}^mt_{rj}\psi_i(w_r)$. Because $\psi_i(w_r)=\delta_{ir}$, only $r=i$ term remains, leaving $(T^*(\psi_i))(v_j)=t_{ij}$. This links entries of $[T]_{\mathcal{BA}}$ and $T^*(\psi_i)$.
+\item[] Since $\{\phi_1,\ldots,\phi_n\}$ is a basis of $V^*$, there are scalars ($s$), with $T^*(\psi_i)=\sum_{k=1}^ns_{ki}\phi_k$. Using $\psi_k(v_j)=\delta_{kj}$ from HW6(a), $(T^*(\psi_i))(v_j)=\sum_{k=1}^ns_{ki} \phi_k(v_j)=\sum_{k=1}^ns_{ki}\delta_{kj}=s_{ji}$. However, from deduction above, we must have for every $i=1,\ldots,m$ and $j=1,\ldots,n$ that $s_{ji}=t_{ij}$. 
+\item[] The matrix of $T$ w.r.t bases $\mathcal{B,A}$ is $[T]_{\mathcal{BA}}=(t_{ij})$. The matrix of $T^*$ w.r.t bases $\mathcal{B^\vee,A^\vee}$ is $[T^*]_{\mathcal{B^\vee A\vee}}=(s_{ji})$. From the equality above, this is the transpose relation. 
+\item[] Thus $[T^*]_{\mathcal{A}^\vee\mathcal{B}^\vee} =([T]_{\mathcal{B}\mathcal{A}})^T$.
 \end{enumerate}
 
 \end{document}
