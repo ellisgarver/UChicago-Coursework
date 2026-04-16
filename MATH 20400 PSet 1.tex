@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage[margin = 1in]{geometry}
+
+\pagestyle{empty}
+\usepackage{comment}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{multicol}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\abs}[1]{\left|#1\right|}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\centerline{\large Problem Set 1: Math 20400 -- Section 40}
+\centerline{Due: Thursday April 2, 2026}
+\centerline{Ellis Garver}
+\begin{enumerate}
+
+\item Consider the function $f(x) = |x|^3$ on $\mathbb R$. Explicitly compute $f'(x)$ and $f''(x)$ for all $x \in \R$. Then, show that $f''(x)$ is not differentiable at $x = 0$. \textit{You may use any standard derivative rules where they apply. Otherwise, use the limit definition of the derivative.}
+\item[] Computing $f'(x)$: For $x \neq 0$, since $f'(x)<0$ for $x<0$ and $f'(x)>0$ for $x>0$, we write $f(x) = |x|^3 = (x^2)^{3/2}$ and apply the chain rule: $f'(x) = \frac{3}{2}(x^2)^{1/2} \cdot 2x = 3|x|x.$ The factor of $x$ captures the sign. At $x = 0$, use the limit definition: $f'(0) = \lim_{h \to 0} \frac{|h|^3}{h}.$
+For $h > 0$ this is $h^2 \to 0$; for $h < 0$ it is $-h^2 \to 0$. Since left $=$ right $f'(0) = 0$.
+ 
+\item[] Computing $f''(x)$: For $x \neq 0$, standard rules (by concavity) give $f''(x) = 6x$ for $x > 0$ and $f''(x) = -6x$ for $x < 0$. At $x = 0$ using limit definition:
+$f''(0) = \lim_{h \to 0} \frac{f'(h) - 0}{h} = \lim_{h \to 0} \frac{3h|h|}{h} = \lim_{h \to 0} 3|h| = 0.$
+Thus $f''(x) = 6|x|$ for all $x \in \R$.
+ 
+\item[] $f''$ is not differentiable at $0$. $\lim_{h \to 0} \frac{f''(h) - f''(0)}{h} = \lim_{h \to 0} \frac{6|h|}{h}.$ The right-hand limit is $+6$ and the left-hand limit is $-6$. Since they differ, $f''$ is not differentiable at $0$. \qed
+
+\item Explain why the following proof of the chain rule does not show that $(g \circ f)'(x_0) = g'(f(x_0)) f'(x_0)$:
+
+\begin{align*}
+\lim\limits_{x \to x_0} \frac{g(f(x)) - g(f(x_0))}{x - x_0} &= \lim_{x \to x_0} \frac{g(f(x)) - g(f(x_0))}{f(x) - f(x_0)} \frac{f(x) - f(x_0)}{x - x_0} \\
+&= \lim_{x \to x_0} \frac{g(f(x)) - g(f(x_0))}{f(x) - f(x_0)} \cdot \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0} \\
+&= g'(f(x_0)) f'(x_0)
+\end{align*}
+\item[] The first algebraic step:
+$\frac{g(f(x)) - g(f(x_0))}{x - x_0} = \frac{g(f(x)) - g(f(x_0))}{f(x) - f(x_0)} \cdot \frac{f(x) - f(x_0)}{x - x_0}$
+is only valid when $f(x) \neq f(x_0)$. Based on the definition of $f$, even if $x\neq x_0$, it is possible that $f(x) = f(x_0)$. For example, trig functions or non-injective functions. Then, for any satisfying $x$ accumulating near $x_0$, the first factor involves a division by zero and is undefined.
+ 
+\item[] The correct proof of chain rule (as shown in one of the lectures) uses support functions $F(x) = f(x) - f(x_0) - f'(x_0)(x - x_0)$ and $G(y) = g(y) - g(y_0) - g'(y_0)(y - y_0)$, and also decomposes into $H(x) = G(f(x)) + g'(y_0)F(x)$. This avoids division by zero. \qed
+
+\item Suppose that $f: [a,b] \to \R$ is a differentiable function such that $f'(x) > 0$ for all $x \in (a,b)$. Recall we proved that $f$ is monotonically increasing. Let $g$ denote the inverse function and prove that \[g'(f(x)) = \frac{1}{f'(x)}.\]
+\textit{Hint: First prove that $g$ is continuous everywhere in its domain (via $\epsilon-\delta$ proof).}
+\item[] First: $g$ is continuous. Let $y_0 = f(x_0)$. Fix $\eps > 0$ and let $\eps' = \min(\eps, x_0 - a, b - x_0) > 0$, so $[x_0 - \eps', x_0 + \eps'] \subseteq [a,b]$. Since $f$ is strictly increasing, let
+$\delta = \min\!\bigl(f(x_0 + \eps') - f(x_0),\; f(x_0) - f(x_0 - \eps')\bigr) > 0.$
+If $|y - y_0| < \delta$, then $f(x_0 - \eps') < y < f(x_0 + \eps')$, and since $f$ is strictly increasing, $g(y)$ lies strictly between $x_0 - \eps'$ and $x_0 + \eps'$, giving $|g(y) - g(y_0)| < \eps' \le \eps$. Therefore $g$ is continuous at every point in its domain.
+ 
+\item[] Next: Computing $g'(f(x))$. By the alternative characterization of the derivative,
+$g'(f(x)) = \lim_{y \to f(x)} \frac{g(y) - g(f(x))}{y - f(x)}.$
+Substitute $y = f(t)$. As $y \to f(x)$, continuity of $g$ gives $t \to x$. $f$ is injective because it is strictly increasing, so $y \neq f(x)$ iff $t \neq x$. Therefore,
+$g'(f(x)) = \lim_{t \to x} \frac{t - x}{f(t) - f(x)} = \frac{1}{\lim_{t \to x} \frac{f(t) - f(x)}{t - x}} = \frac{1}{f'(x)}.$ \qed
+
+\item Suppose that $f:[a,b] \to \R$ is $C^1$ in $(a,b)$. Let $[c,d] \subset (a,b)$. Then, there exists $M > 0$ such that for all $x,y \in [c,d]$, \[|f(y) - f(x)| \leq M |y - x|.\]
+\item[] Since $f \in C^1(a,b)$, the derivative $f'$ is continuous on $(a,b)$ and on the compact set $[c,d]$. By EVT, $|f'|$ attains its maximum on $[c,d]$. Let $M = \max_{t \in [c,d]} |f'(t)| < \infty.$
+ 
+\item[] Let $x, y \in [c,d]$ and WLOG $x < y$. Then $[x,y] \subseteq [c,d] \subset (a,b)$, so $f$ is continuous on $[x,y]$ and differentiable on $(x,y)$. By the MVT, there exists $z \in (x,y) \subseteq [c,d]$ with $f(y) - f(x) = f'(z)(y-x).$ Therefore $|f(y) - f(x)| = |f'(z)| \cdot |y - x| \le M|y - x|.$ \qed
+
+\item Let $f(x) = \min(x - \lfloor x \rfloor, \lceil x \rceil - x)$. Then, let $f_n(x) = \frac{1}{2^{n-1}}f(2^{n-1}x)$. Recall that in class we proved that for each $N \in \mathbb N$, the function \[S_N(x) = \sum_{n = 1}^N f_n(x)\] is continuous, and that the sequence $(S_N)$ converges uniformly to a continuous function $S(x)$. Show that $S$ is not differentiable at $k$ for any $k \in \mathbb Z$. (\textit{After this, try to convince yourself that a similar argument could work for any $x \in \mathbb R$, but you do not need to submit this.})
+\item[] From class $f(x)$ is a tent function with $f(n) = 0$ for all $n \in \Z$ and $f(t) = t$ for $t \in [0, \frac{1}{2}]$. Since $f$ has a period of $1$, $f(2^{n-1}k) = 0$ for every $n \in \N$ and $k \in \Z$, and so $S(k) = 0$.
+ 
+\item[] Fix $k \in \Z$ and let $h_m = 2^{-(m-1)} > 0$. Using $S(k) = 0$:
+$\frac{S(k + h_m) - S(k)}{h_m} = 2^{m-1} \sum_{n=1}^{\infty} \frac{1}{2^{n-1}} f\!\left(2^{n-m}\right)$.
+\begin{itemize}
+  \item[$\circ$] For $n \ge m+1$: $2^{n-m}$ is an integer $\ge 2$, so $f(2^{n-m}) = 0$.
+  \item[$\circ$] For $n = m$: $f(1) = 0$.
+  \item[$\circ$] For $n \le m-1$: $0 < 2^{n-m} \le \tfrac{1}{2}$, so $f(2^{n-m}) = 2^{n-m}$.
+\end{itemize}
+Then the sum collapses to $2^{m-1} \sum_{n=1}^{m-1} \frac{1}{2^{n-1}} \cdot 2^{n-m} = 2^{m-1} \cdot (m-1) \cdot 2^{1-m} = m - 1.$
+ 
+\item[] As $m \to \infty$, the result goes to $+\infty$. Hence we have shown that the limit defining $S'(k)$ can never be finite, and therefore $S$ is not differentiable at $k$ for any $k\in \Z$. \qed
+
+\item Suppose that $f:[a,b] \to \R$ is a differentiable function such that $f'(x_0) > 0$ for some $x_0 \in (a,b)$. Show that this does not imply that $f$ is increasing in a neighborhood of $x_0$. Then \textit{clearly} state and conclude the analogous result if instead we consider $x_0 \in (a,b)$ where $f'(x_0) < 0$.  \textit{Hint: Consider the function} \[f(x) = \begin{cases} 2x^2 \sin(1/x) + x & x \neq 0, \\ 0 & x = 0,\end{cases}\]
+\textit{at $x = 0$. In other words, prove that $f$ has positive derivative at 0, but is not increasing on any neighborhood of 0.}
+\item[] Consider $f(x) = 2x^2 \sin(1/x) + x$ for $x \neq 0$ and $f(0) = 0$ for $x_0 = 0$.
+ 
+\item[] By the limit definition,
+$f'(0) = \lim_{h \to 0} \frac{2h^2 \sin(1/h) + h}{h} = \lim_{h \to 0} \bigl(2h \sin(1/h) + 1\bigr) = 1 > 0.$
+ 
+\item[] For $x \neq 0$, differentiating $f(x)$ gives $f'(x) = 4x \sin(1/x) - 2\cos(1/x) + 1.$ Now let $x_n = \frac{1}{2\pi n} \to 0$. Then $\sin(1/x_n) = 0$ and $\cos(1/x_n) = 1$, so $f'(x_n) = 0 - 2 + 1 = -1 < 0.$ Since $x_n \to 0$ by definition, every neighborhood near $0$ contains a point where $f' < 0$, so $f$ is not actually monotonically increasing on any neighborhood near $0$.
+ 
+\item[] Analogous result: If $f'(x_0) < 0$, it does not imply that $f$ is decreasing in a neighborhood of $x_0$. It suffices to show this result by replacing $f$ with $-f$ at $x_0 \in (a,b)$. \qed
+
+\item Let \[f(x) = \begin{cases}
+e^{-1/x^2} & x \neq 0, \\ 0 & x = 0.
+\end{cases}\]
+
+Show that $f \in C^\infty(\R)$ with $f^{(k)}(0) = 0$ for all $k \in \N$. \textit{Hint: Show this via induction. For this problem, you may use any version of L'H\^opital's rule that you wish, even if we did not prove it in class.}
+\item[] WTS for all $k \ge 0$: $f^{(k)}(x) = P_k(1/x)\, e^{-1/x^2}$ for $x \neq 0$, $P_k$ polynomial, and $f^{(k)}(0) = 0$.
+ 
+\item[] Base case ($k = 0$). $f(0) = 0$ by definition, and $f(x) = P_0(1/x) e^{-1/x^2}$ with $P_0 \equiv 1$.
+ 
+\item[] Induction: Assume both statements hold for $k$. 
+\item[] For $x \neq 0$, taking the derivative $f^{(k)}(x) = P_k(1/x) e^{-1/x^2}$ yields $P_{k+1}(1/x) e^{-1/x^2}$, thus the first statement holds for $k+1$. For $x=0$, by the limit definition
+$f^{(k+1)}(0) = \lim_{x \to 0} \frac{P_k(1/x)\, e^{-1/x^2}}{x}.$
+Let $t = 1/x$ (so $t \to \pm\infty$), then we get $\lim_{t \to \infty} t \cdot P_k(t)\, e^{-t^2} = 0,$ since $e^{-t^2}$ increases faster than any polynomial (L'H\^{o}pital). Second statement holds.
+ 
+\item[] Thus each $f^{(k)}$ is continuous on $\R$ since they are smooth for $x \neq 0$ and $\lim_{x \to 0} f^{(k)}(x) = 0 = f^{(k)}(0)$, so we confirm $f \in C^\infty(\R)$ with $f^{(k)}(0) = 0$ for all $k \in \N$. \qed
+
+\end{enumerate}
+\end{document}

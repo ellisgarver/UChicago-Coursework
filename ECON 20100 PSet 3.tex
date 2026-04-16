@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\geometry{margin=1in}
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\large\bfseries}  % formatting
+  {\thesection}{1em}{}          % label
+
+\title{Problem Set 3 \\ ECON 20100 -- Winter 2026}
+\author{Kenneth C. Griffin Department of Economics, University of Chicago \\ Instructor: Julia Seither}
+\date{
+Due: Wednesday, February 18, 2026 at 1:30pm \\ \medskip
+\textit{You are encouraged to work in teams, but each student must submit an individual solution indicating team members.}
+}
+
+\begin{document}
+
+\maketitle
+
+\medskip
+
+\noindent \textbf{Instructions.} Show all work. Clearly state any assumptions you make. Unsupported answers will not receive full credit. When asked to ``explain,'' a few precise sentences are expected.
+
+\bigskip
+
+\noindent \textbf{Readings:} Varian, Chapters 33--35.
+
+\bigskip
+
+\section*{Question 1: Welfare Theorems in an Exchange Economy [25 points]}
+
+Consider a two-person, two-good exchange economy. Consumers A and B have the following utility functions:
+
+\[
+u_A(x_1^A, x_2^A) = (x_1^A)^{1/3}(x_2^A)^{2/3}, 
+\qquad
+u_B(x_1^B, x_2^B) = (x_1^B)^{2/3}(x_2^B)^{1/3}.
+\]
+The total endowment is $\omega = (\omega_1, \omega_2) = (12, 12)$.  
+Initial endowments are $\omega^A = (2,10)$ and $\omega^B = (10,2)$.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item[ (a) ] [5 points] Find the competitive equilibrium prices and allocation. (Normalize $p_2 = 1$.)
+\item[] Normalize $p_2=1\Rightarrow p=p_1$. Cobb-Douglas demand functions: $x_1=\frac{\alpha}{\alpha+\beta}\cdot\frac{M}{p_1}\Rightarrow\frac{\alpha}{\alpha+\beta}\cdot\frac{M}{p}$ and $x_2=\frac{\beta}{\beta+\alpha}\cdot\frac{M}{p_2}\Rightarrow\frac{\beta}{\beta+\alpha}\cdot\frac{M}{1}$. Income endowments: $M_A=p_1w_1^A+p_2w_2^A\Rightarrow pw_1^A+1w_2^A=p(2)+10=2p+10$, $M_B=p_1w_1^B+p_2w_2^B\Rightarrow pw_1^B+1w_2^B=p(10)+2=10p+2$. Then, $x_1^A=\frac{1/3}{1}\cdot\frac{2p+10}{p}=\frac{2p+10}{3p}$ and $x_1^B=\frac{2/3}{1}\cdot\frac{10p+2}{p}=\frac{2(10p+2)}{3p}$. Market clearing conditions: $x_1^A+x_1^B=12\Rightarrow\frac{2p+10}{3p}+\frac{20p+4}{3p}=\frac{22p+14}{3p}=12\Rightarrow22p+14=36p\Rightarrow14=14p\Rightarrow p=1$. So equilibrium is $p_1=p_2=1$. Allocations: $x_1^A=\frac{2(1)+10}{3(1)}=4$, $x_2^A=\frac{2}{3}(2(1)+10)=8$, $x_1^B=\frac{2(10(1)+2)}{3(1)}=8$, $x_2^B=\frac{1}{3}(10(1)+2)=4$. So, equilibrium is $x^A=(4,8)$ and $x^B=(8,4)$.
+
+\item[ (b) ] [4 points] Verify that the equilibrium allocation is Pareto efficient by showing that $MRS_A = MRS_B$ at the equilibrium.
+\item[] $MRS^A=\frac{MU_1^A}{MU_2^A}=\frac{\frac{1}{3}(x_1^A)^{-2/3}(x_2^A)^{2/3}}{\frac{2}{3}(x_1^A)^{1/3}(x_2^A)^{-1/3}}=\frac{x_2^A}{2x_1^A}$ and $MRS^B=\frac{MU_1^B}{MU_2^B}=\frac{\frac{2}{3}(x_1^B)^{-1/3}(x_2^B)^{1/3}}{\frac{1}{3}(x_1^B)^{2/3}(x_2^B)^{-2/3}}=\frac{2x_2^B}{x_1^B}$. At $x^A=(4,8)$ and $x^B=(8,4)$: $MRS^A=\frac{8}{2(4)}=1$ and $MRS^B=\frac{2(4)}{8}=1$. 
+\item[] Since $MRS^A=MRS^B=1=\frac{p_1}{p_2}$, the allocation is Pareto efficient.
+
+\item[ (c) ] [4 points] Derive the equation for the contract curve in this economy.
+\item[] Set $MRS^A=MRS^B\Rightarrow\frac{x_2^A}{2x_1^A}=\frac{2x_2^B}{x_1^B}$. Using $x_1^B=12-x_1^A$ and $x_2^B=12-x_2^A$: $\frac{x_2^A}{2x_1^A}=\frac{2(12-x_2^A)}{12-x_1^A}\Rightarrow x_2^A(12-x_1^A)=4x_1^A(12-x_2^A)\Rightarrow12x_2^A-x_1^Ax_2^A=48x_1^A-4x_1^Ax_2^A\Rightarrow12x_2^A+3x_1^Ax_2^A=48x_1^A\Rightarrow x_2^A(12+3x_1^A)=48x_1^A\Rightarrow x_2^A=\frac{16x_1^A}{4+x_1^A}$.
+
+\item[ (d) ] [6 points] Now suppose a social planner wants to achieve the allocation $\hat{x}^A = (4,8), \; \hat{x}^B = (8,4)$.
+
+\begin{enumerate}[label=(\roman*)]
+\item Verify that this allocation is Pareto efficient.
+\item[] This allocation is the equilibrium. At $\hat{x}^A=(4,8)$ and $\hat{x}^B=(8,4)$: $MRS^A=\frac{8}{2(4)}=1$ and $MRS^B=\frac{2(4)}{8}=1$. Since $MRS^A=MRS^B$, the allocation is Pareto efficient.
+\item Find the lump-sum transfers (in terms of good 2) and the equilibrium price ratio that would support this allocation as a competitive equilibrium, as guaranteed by the Second Welfare Theorem.
+\item[] From $MRS$ condition, the price ratio is $p=p_1/p_2=1\Rightarrow p_1=p_2=1$. At these prices: $M_A=1(2)+1(10)=12$, income required to demand $(4,8)$ is $1(4)+1(8)=12$, so $T^A=12-12=0$. Similarly for B, $M_B=1(10)+1(2)=12$, income required is $1(8)+1(4)=12$, so $T^B=0$. Initial endowments at the shown equilibrium already support target allocation at $p_1=p_2=1$ so no transfers needed.
+\end{enumerate}
+
+\item[ (e) ] [6 points] Suppose instead that consumer A has preferences
+$u_A(x_1^A, x_2^A) = \min\{x_1^A, x_2^A\}$
+(with B's preferences unchanged). Does the Second Welfare Theorem still apply? Explain carefully, referencing the required assumptions.
+\item[] The Second Welfare Theorem requires preferences that are convex and locally non-satiated. Leontief preferences $u^A=\min\{x_1^A,x_2^A\}$ produce continuous and weakly-convex indifference curves, so the theorem applies. However, Leontief preferences have kinks at the optimum where $x_1^A=x_2^A$, so $MRS$ is not unique but competitive equilibrium is still achievable.
+
+\end{enumerate}
+
+\bigskip
+
+\section*{Question 2: General Equilibrium with Production [25 points]}
+
+Consider an economy with one consumer and two goods. The consumer has utility
+$u(x_1, x_2) = x_1 x_2$
+and an endowment of $L = 24$ units of labor. Labor is the only input. The production technologies are: 
+\[x_1 = 2L_1, \;x_2 = L_2\]
+where $L_1 + L_2 \leq 24$.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item[ (a) ] [4 points] Derive the production possibilities frontier (PPF) for this economy. What is the marginal rate of transformation $MRT(x_1, x_2)$?
+\item[] $x_1=2L_1\Rightarrow L_1=x_1/2$ and $x_2=L_2\Rightarrow L_2=x_2$. Labor constraint: $L_1+L_2\leq24\Rightarrow\frac{x_1}{2}+x_2\leq24$, so the PPF is $x_2=24-\frac{x_1}{2}$. $MRT=\left|\frac{dx_2}{dx_1}\right|=\frac{1}{2}$.
+
+\item[ (b) ] [5 points] Find the Pareto efficient allocation by solving the social planner's problem (maximize utility subject to the PPF).
+\item[] Substitute PPF into utility: $\max_{x_1}\ x_1\!\left(24-\frac{x_1}{2}\right)=24x_1-\frac{x_1^2}{2}$. FOC: $24-x_1=0\Rightarrow x_1^*=24\Rightarrow x_2^*=24-12=12$. Pareto efficient allocation: $(x_1^*,x_2^*)=(24,12)$.
+
+\item[ (c) ] [6 points] Find the competitive equilibrium. That is, find prices $(p_1, p_2, w)$ and an allocation $(x_1^*, x_2^*)$ such that:
+\begin{itemize}
+\item Each firm maximizes profit,
+\item The consumer maximizes utility subject to the budget constraint,
+\item All markets clear.
+\end{itemize}
+Verify that $MRS = MRT$ at the equilibrium.
+\item[] \text{Firms:} $\pi_1=(2p_1-w)L_1\Rightarrow2p_1=w$ and $\pi_2=(p_2-w)L_2\Rightarrow p_2=w$. So $w=p_2$ and $p_1=p_2/2$. Normalize $p_2=1\Rightarrow p_1=1/2$, $w=1$. \text{Consumer:} $M=wL=24$, and with $u=x_1x_2$: $x_1=\frac{M}{2p_1}=\frac{24}{1}=24$ and $x_2=\frac{M}{2p_2}=\frac{24}{2}=12$. \text{Market clearing:} $L_1=12$, $L_2=12$, $L_1+L_2=24$. Equilibrium: $(p_1,p_2,w)=(1/2,1,1)$ and $(x_1^*,x_2^*)=(24,12)$. $MRS=\frac{x_2}{x_1}=\frac{12}{24}=\frac{1}{2}=MRT$ at equilibrium.
+
+\item[ (d) ] [10 points] Now suppose the government imposes a per-unit tax $t$ on good 1 (paid by the firm). The tax revenue is returned to the consumer as a lump sum.
+
+\begin{enumerate}[label=(\roman*)]
+\item Find the new equilibrium allocation as a function of $t$.
+\item[] With $t$, firm 1's zero-profit condition becomes $2(p_1-t)=w=1\Rightarrow p_1=1/2+t$. Consumer income: $M=24+tx_1$. Demand: $x_1=\frac{24+tx_1}{2(1/2+t)}=\frac{24+tx_1}{1+2t}\Rightarrow x_1(1+2t)=24+tx_1\Rightarrow x_1(1+t)=24$, so $x_1(t)=\frac{24}{1+t}$ and $x_2(t)=24-\frac{x_1}{2}=\frac{24t+12}{1+t}$.
+\item Show that the equilibrium is not Pareto efficient for $t > 0$. What condition is violated?
+\item[] Pareto efficiency requires $MRS=MRT=1/2$. But here the consumer faces price ratio $p_1/p_2=1/2+t$, so $MRS=1/2+t\neq1/2=MRT$ for and positive $t>0$. Thus, the tax causes a difference between $MRS$ and $MRT$, violating Pareto efficiency condition.
+\item Compute the deadweight loss for $t = 1$, measured as the utility difference between the undistorted and distorted equilibria.
+\item[] At $t=0$: $(x_1,x_2)=(24,12)\Rightarrow u^*=288$. At $t=1$: $x_1=12$, $x_2=18\Rightarrow u^{distorted}=216$. So $DWL=288-216=72$.
+\end{enumerate}
+
+\end{enumerate}
+
+\bigskip
+
+\section*{Question 3: Externalities and Efficiency [30 points]}
+
+A factory produces output $q$ and emits pollution as a byproduct. The factory's profit function is:
+
+\[
+\pi(q) = 60q - q^2.
+\]
+The pollution damages a nearby fishery. The external damage function is:
+
+\[
+D(q) = 2q^2.
+\]
+
+\begin{enumerate}[label=(\alph*)]
+
+\item[ (a) ] [3 points] Find the factory's privately optimal output $q_{\text{private}}$.
+\item[] $\pi'(q)=60-2q=0\Rightarrow q^{private}=30$.
+
+\item[ (b) ] [4 points] Find the socially optimal output $q_{\text{social}}$ by maximizing $\pi(q) - D(q)$.
+\item[] $\pi(q)-D(q)=60q-q^2-2q^2=60q-3q^2$. FOC: $60-6q=0\Rightarrow q^{social}=10$.
+
+\item[ (c) ] [4 points] Calculate the deadweight loss from the externality (the welfare difference between the private and social outcomes).
+\item[] $W(q)=60q-3q^2$. At $q^{social}=10$: $W^{social}=600-300=300$. At $q^{private}=30$: $W^{private}=1800-2700=-900$. So $DWL=300-(-900)=1200$.
+
+\item[ (d) ] [5 points] Pigouvian tax. Find the per-unit tax $t^*$ on output that induces the factory to produce $q_{\text{social}}$. Verify your answer.
+\item[] With the tax $t^*$, factory FOC: $60-2q-t^*=0$. At $q=10$: $t^*=60-2(10)=40$. Since the factory maximizes $(60-40)q-q^2=20q-q^2\Rightarrow$ FOC: $20-2q=0\Rightarrow q=10=q^{social}$. Further, $t^*=D'(q^{social})=4(10)=40$.
+
+\item[ (e) ] [7 points] Coase theorem. Suppose the factory and the fishery can bargain costlessly.
+
+\begin{enumerate}[label=(\roman*)]
+\item If the fishery has the right to clean water, what output level will they agree on? What is the range of possible side payments?
+\item[] Both maximize joint surplus $\pi(q)-D(q)=60q-3q^2\Rightarrow q^{social}=10$. At $q=10$: $\pi(10)=500$, $D(10)=200$. Suppose $S$ = payment from factory to fishery. Fishery then accepts if $S\geq D(10)=200$ and factory accepts if $S\leq\pi(10)=500$. 
+\item[] Range: $200\leq S\leq500$.
+\item If the factory has the right to pollute, what output level will they agree on? What is the range of possible side payments?
+\item[] Without Coase theorem/costlessly bargaining: $q^{private}=30$, $\pi(30)=900$, $D(30)=1800$. With bargaining, they bargain to $q^{social}=10$. Fishery's gain: $D(30)-D(10)=1600$. Factory's loss: $\pi(30)-\pi(10)=400$. Suppose $S$ = payment from fishery to factory. Factory then accepts if $S\geq400$ and fishery accepts if $S\leq1600$. 
+\item[] Range: $400\leq S\leq1600$.
+\item Compare your answers. What does the Coase theorem predict about efficiency? What changes between the two cases?
+\item[] Both cases bargain to $q^{social}=10$, consistent with Coase Theorem: Costless bargaining leads to an efficient outcome regardless of property rights or other restrictions. However the distribution of surplus changes between the cases. When the fishery has rights it receives $S=[200,500]$, but when the factory has rights, the fishery pays $S=[400,1600]$.
+\end{enumerate}
+
+\item[ (f) ] [7 points] Multiple polluters. Suppose there are $n$ identical factories, each with profit $\pi_i(q_i) = 60q_i - q_i^2$, and total damage is $D(Q) = 2Q^2, \; \text{where } Q = \sum_{i=1}^n q_i$.
+
+\begin{enumerate}[label=(\roman*)]
+\item Find each factory's privately optimal output and the socially optimal per-factory output.
+\item[] When private, each factory ignores aggregate damage. FOC: $60-2q_i=0\Rightarrow q_i^{private}=30$. When social, we have $q_i=q$, $Q=nq$. Maximize total profit $n(60q-q^2)-2n^2q^2$ over $q$. FOC: $n(60-2q)-4n^2q=0\Rightarrow60-2q-4nq=0\Rightarrow q^{social}=\frac{30}{1+2n}$.
+\item Find the optimal Pigouvian tax. How does it depend on $n$? Give an economic interpretation.
+\item[] With tax $t^*$, FOC: $60-2q-t^*=0$ at $q=q^{social}\Rightarrow t^*=60-\frac{60}{1+2n}=\frac{120n}{1+2n}$. Numerator grows faster so the tax increases with $n$. This means that the marginal external cost from any one firm is $D'(Q)=4Q=4nq$, which also increase with $n$. Thus, the Pigouvian tax must grow with $n$ to offset the externality caused by more polluters.
+\item Explain why Coasian bargaining becomes more difficult as $n$ grows. Reference at least two specific problems.
+\item[] For one, all $n+1$ parties must negotiate simultaneously, which becomes very costly as $n$ grows, deteriorating the assumption of costless bargaining. Secondly, each factory would prefer to let the others take the cost of reducing output, thereby undermining the ability to reach a negotiated solution. Both of these problems get worse as $n$ increases.
+\end{enumerate}
+
+\end{enumerate}
+
+\bigskip
+
+\section*{Question 4: Externalities in a General Equilibrium Setting [20 points]}
+
+Consider an economy with two identical consumers, A and B. Each has income $m = 20$ and allocates it between a private consumption good $x$ (price normalized to 1) and an activity $y$ (e.g., a noisy activity) that generates a negative externality. Good $y$ is produced competitively at constant marginal cost $c = 1$, so its market price is $p = 1$. Preferences are:
+
+\[
+u_A(x_A, y_A, y_B) = x_A + 8 \ln(y_A) - y_B,
+\]
+\[
+u_B(x_B, y_B, y_A) = x_B + 8 \ln(y_B) - y_A.
+\] \\
+Each consumer's utility depends negatively on the other consumer's level of activity $y$. Budget constraints are: $x_i + p y_i = 20 \; \text{for } i \in \{A,B\}$.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item[ (a) ] [4 points] Explain why the First Welfare Theorem does not apply to this economy. Which assumption is violated?
+\item[] The First Welfare Theorem requires that there are no externalities so each consumer's utility depends only on their own choices. Here $u^A$ depends on $y^B$ and $u^B$ depends on $y^A$, so each consumer's activity negatively affects the other. Since $y^A$ and $y^B$ are not priced, the market fails to account for their social cost and so First Welfare Theorem does not apply.
+
+\item[ (b) ] [6 points] Find the competitive equilibrium, where each consumer takes prices and the other's activity level as given.
+\item[] A takes $y^B$ and maximizes $u^A=x^A+8\ln(y^A)-y^B$ subject to $x^A+y^A=20$. Substituting $x^A=20-y^A$: $\max_{y^A}(20-y^A)+8\ln(y^A)-y^B$. FOC: $-1+\frac{8}{y^A}=0\Rightarrow y^A=8$. By symmetry $y^B=8$ and $x^A=x^B=12$. Competitive equilibrium: $(x^A,y^A,x^B,y^B)=(12,8,12,8)$.
+
+\item[ (c) ] [6 points] Find the Pareto efficient allocation by having a social planner maximize $u_A + u_B$ subject to the aggregate resource constraint.
+\item[] Social planner maximizes $u^A+u^B=(x^A+x^B)+8\ln(y^A)+8\ln(y^B)-y^A-y^B$ subject to $x^A+x^B=40-y^A-y^B$. Substituting max $x^A+x^B$: $40+8\ln(y^A)-2y^A+8\ln(y^B)-2y^B$. FOC: $\frac{8}{y^A}-2=0\Rightarrow y^A=4$. By symmetry $y^B=4$. Then $x^A+x^B=32\Rightarrow x^A=x^B=16$. Efficient allocation: $(x^A,y^A,x^B,y^B)=(16,4,16,4)$.
+
+\item[ (d) ] [4 points] Compare the equilibrium and efficient allocations. Is the activity $y$ over- or under-consumed in equilibrium? Propose a specific per-unit tax on $y$ that restores efficiency and explain the intuition.
+\item[] In equilibrium $y^A=y^B=8$, but efficiency requires that $y^A=y^B=4$, so $y$ is over-consumed. Each consumer ignores the marginal cost $\partial u^j/\partial y^i=-1$ their activity imposes on the other. With a per-unit tax $t^y$, consumer A's FOC now becomes $-(1+t^y)+\frac{8}{y^A}=0\Rightarrow y^A=\frac{8}{1+t^y}$. Setting $y^A=4\Rightarrow\tau^*=1$. A tax of $t^{y*}=1$ restores efficiency because it equals exactly the marginal external cost each consumer imposes on the other.
+
+\end{enumerate}
+
+\end{document}

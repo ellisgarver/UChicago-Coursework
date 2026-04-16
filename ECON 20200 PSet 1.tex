@@ -1,0 +1,467 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{parskip}
+
+\geometry{margin=1in}
+
+\title{Econ 20200 --- Problem Set 1 Solutions}
+\date{Due April 3rd}
+
+\begin{document}
+\maketitle
+
+%% ============================================================
+\section*{Problem 1 (5 points) --- Skilled vs.\ Unskilled Labor}
+%% ============================================================
+
+The production function is
+\[
+    Y = z(K + 80000\,L_u)^{0.6}\,L_s^{0.4}.
+\]
+
+%% ----------------------------
+\subsection*{Part (a) --- Marginal Products}
+%% ----------------------------
+
+Taking partial derivatives:
+
+\[
+    MPK
+        = \frac{\partial Y}{\partial K}
+        = 0.6\,z\,(K+80000\,L_u)^{-0.4}\,L_s^{0.4}
+\]
+
+\[
+    MP_{L_u}
+        = \frac{\partial Y}{\partial L_u}
+        = 0.6\,z\cdot 80000\cdot(K+80000\,L_u)^{-0.4}\,L_s^{0.4}
+        = 80000 \cdot MPK
+\]
+
+\[
+    MP_{L_s}
+        = \frac{\partial Y}{\partial L_s}
+        = 0.4\,z\,(K+80000\,L_u)^{0.6}\,L_s^{-0.6}
+\]
+
+Note the structural relationship $MP_{L_u} = 80000 \cdot MPK$, which reflects
+the fact that capital and unskilled labor are \emph{perfect substitutes}
+(each unskilled worker is equivalent to 80{,}000 units of capital in this
+production function). By contrast, $MP_{L_s}$ is \emph{increasing} in $K$,
+confirming that capital and skilled labor are \emph{complements}.
+
+%% ----------------------------
+\subsection*{Part (b) --- Numerical Comparison, $L_s = 0.6$ in Both Periods}
+%% ----------------------------
+
+\textbf{1990:} $z=50,\; K=25000,\; L_u=1,\; L_s=0.6$.
+
+\[
+    K + 80000\,L_u = 25000 + 80000 = 105000
+\]
+
+Key computed values:
+$(105000)^{0.4} \approx 102.0$,\;
+$(0.6)^{0.4} \approx 0.8152$,\;
+$(105000)^{0.6} \approx 1030.4$,\;
+$(0.6)^{-0.6} \approx 1.3587$.
+
+\begin{align*}
+    MP_{L_u}^{1990}
+        &= 50 \times 0.6 \times 80000 \times (105000)^{-0.4} \times (0.6)^{0.4} \\
+        &= 50 \times 0.6 \times 80000 \times 0.00980 \times 0.8152
+         \approx 19{,}180 \\[4pt]
+    MP_{L_s}^{1990}
+        &= 50 \times 0.4 \times (105000)^{0.6} \times (0.6)^{-0.6} \\
+        &= 50 \times 0.4 \times 1030.4 \times 1.3587
+         \approx 28{,}000
+\end{align*}
+
+\textbf{2020:} $z=60,\; K=50000,\; L_u=1,\; L_s=0.6$.
+
+\[
+    K + 80000\,L_u = 50000 + 80000 = 130000
+\]
+
+Key computed values:
+$(130000)^{-0.4} \approx 0.008984$,\;
+$(130000)^{0.6} \approx 1167.6$.
+
+\begin{align*}
+    MP_{L_u}^{2020}
+        &= 60 \times 0.6 \times 80000 \times 0.008984 \times 0.8152
+         \approx 21{,}090 \\[4pt]
+    MP_{L_s}^{2020}
+        &= 60 \times 0.4 \times 1167.6 \times 1.3587
+         \approx 38{,}090
+\end{align*}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+ & $MP_{L_u}$ & $MP_{L_s}$ & Skill Premium ($MP_{L_s}/MP_{L_u}$) \\
+\midrule
+1990 & 19,180 & 28,000 & 1.46 \\
+2020 & 21,090 & 38,090 & 1.81 \\
+\% Change & $+10\%$ & $+36\%$ & $\uparrow$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Comment:} Both capital doubling and TFP growth raised the marginal
+products of all workers, but $MP_{L_s}$ rose far more than $MP_{L_u}$ because
+capital \emph{complements} skilled labor while \emph{substituting} for
+unskilled labor. As a result, the skill premium widened from 1.46 to 1.81,
+mirroring the real-world rise in wage inequality over 1990--2020.
+
+%% ----------------------------
+\subsection*{Part (c) --- 2020 with $L_s = 0.7$}
+%% ----------------------------
+
+Now $L_s^{2020} = 0.7$. Updated key values:
+$(0.7)^{0.4} \approx 0.8669$,\; $(0.7)^{-0.6} \approx 1.2388$.
+
+\begin{align*}
+    MP_{L_u}^{2020}
+        &= 60 \times 0.6 \times 80000 \times 0.008984 \times 0.8669
+         \approx 22{,}430 \\[4pt]
+    MP_{L_s}^{2020}
+        &= 60 \times 0.4 \times 1167.6 \times 1.2388
+         \approx 34{,}710
+\end{align*}
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+ & $MP_{L_u}$ & $MP_{L_s}$ & Skill Premium \\
+\midrule
+1990 & 19,180 & 28,000 & 1.46 \\
+2020 (part c) & 22,430 & 34,710 & 1.55 \\
+\% Change & $+17\%$ & $+24\%$ & $\uparrow$ (less) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Comparison with Part (b):} When the supply of skilled workers grows
+from 0.6 to 0.7, $MP_{L_u}$ rises \emph{more} (higher $L_s$ amplifies the
+productivity of the whole system, which benefits unskilled workers too), while
+$MP_{L_s}$ rises \emph{less} due to diminishing marginal returns. The skill
+premium increases only to 1.55 versus 1.81 in part (b). If the supply of
+skilled workers keeps pace with demand from capital accumulation, wage
+inequality is moderated.
+
+%% ----------------------------
+\subsection*{Part (d) --- Effect of TFP Growth ($z \uparrow$)}
+%% ----------------------------
+
+From the expressions in part (a), $z$ enters multiplicatively in \emph{both}
+marginal products:
+\[
+    MP_{L_u} \propto z, \qquad MP_{L_s} \propto z.
+\]
+
+An increase in TFP raises the marginal product of \emph{both} types of labor
+proportionally, shifting labor demand outward for each type. Because $z$
+cancels in the skill premium ratio $MP_{L_s}/MP_{L_u}$, TFP growth alone does
+\emph{not} change the relative demand for skilled versus unskilled labor ---
+it is neutral between skill types. Firms hire more of both workers.
+
+%% ----------------------------
+\subsection*{Part (e) --- Effect of Capital Accumulation ($K \uparrow$)}
+%% ----------------------------
+
+\begin{itemize}[leftmargin=*]
+    \item $MP_{L_u} \propto (K + 80000\,L_u)^{-0.4}$: as $K$ rises, this
+    term \emph{decreases}, so $MP_{L_u}$ \emph{falls}. Capital substitutes
+    for unskilled labor --- more machines reduce the marginal value of
+    additional unskilled workers.
+
+    \item $MP_{L_s} \propto (K + 80000\,L_u)^{0.6}$: as $K$ rises, this
+    term \emph{increases}, so $MP_{L_s}$ \emph{rises}. Capital complements
+    skilled labor --- more machines make trained operators more productive.
+\end{itemize}
+
+Capital accumulation raises the demand for skilled labor and lowers the demand
+for unskilled labor, widening the skill premium.
+
+%% ============================================================
+\section*{Problem 2 (6 points) --- Firm Optimization: $Y = 100L^{0.6}$, $w = 10$}
+%% ============================================================
+
+%% ----------------------------
+\subsection*{Part (a) --- Baseline}
+%% ----------------------------
+
+The firm's problem is:
+\[
+    \max_{L} \; \pi(L) = 100L^{0.6} - 10L
+\]
+
+\textbf{First-order condition:}
+\[
+    \frac{d\pi}{dL} = 60\,L^{-0.4} - 10 = 0
+    \;\Longrightarrow\;
+    L^{0.4} = 6
+    \;\Longrightarrow\;
+    L^* = 6^{2.5} = 36\sqrt{6} \approx 88.18
+\]
+
+\textbf{Output:}
+\[
+    Y^* = 100\,(6^{2.5})^{0.6} = 100 \cdot 6^{1.5} = 600\sqrt{6} \approx 1469.7
+\]
+
+\textbf{Maximized profit:}
+\[
+    \pi^* = 600\sqrt{6} - 10\cdot 36\sqrt{6} = 240\sqrt{6} \approx 587.9
+\]
+
+%% ----------------------------
+\subsection*{Part (b) --- Government Subsidy of 0.5 per Worker}
+%% ----------------------------
+
+The government pays the firm 0.5 units per worker hired, so the effective
+labor cost is $w_{\text{eff}} = 10 - 0.5 = 9.5$. The new problem is:
+\[
+    \max_{L} \; 100L^{0.6} - 9.5\,L
+\]
+
+\textbf{FOC:}
+\[
+    60\,L^{-0.4} = 9.5
+    \;\Longrightarrow\;
+    L^{0.4} = \frac{60}{9.5} \approx 6.316
+    \;\Longrightarrow\;
+    L^* \approx 100.1
+\]
+
+Since the effective wage fell ($9.5 < 10$), the firm hires \textbf{more}
+labor, produces \textbf{more} output, and earns \textbf{higher} profit
+relative to the baseline.
+
+%% ----------------------------
+\subsection*{Part (c) --- Environmental Compliance}
+%% ----------------------------
+
+Each production worker requires an additional 0.1 cleanup workers, so the
+effective cost per production worker is $(1+0.1)\,w = 11$. Output is still
+$Y = 100L^{0.6}$ where $L$ is production workers. The firm solves:
+\[
+    \max_{L} \; 100L^{0.6} - 11\,L
+\]
+
+\textbf{FOC:}
+\[
+    60\,L^{-0.4} = 11
+    \;\Longrightarrow\;
+    L^{0.4} = \frac{60}{11} \approx 5.455
+    \;\Longrightarrow\;
+    L^* \approx 69.4
+\]
+
+Since the effective cost rose ($11 > 10$), the firm hires \textbf{fewer}
+production workers, produces \textbf{less} output, and earns \textbf{lower}
+profit. The environmental regulation acts as a tax on labor, reducing
+employment on the production line.
+
+%% ============================================================
+\section*{Problem 3 (6 points) --- Corner Solutions}
+%% ============================================================
+
+%% ----------------------------
+\subsection*{Part (a) --- Dan: $u(c,h) = c + 0.8h$, $\pi = 0.8$}
+%% ----------------------------
+
+Dan's optimization problem is:
+\[
+    \max_{c,\,h} \; c + 0.8h
+    \qquad \text{s.t.} \quad c \leq w(1-h) + 0.8
+\]
+
+\textbf{Lagrangian:}
+\[
+    \mathcal{L} = c + 0.8h + \lambda\bigl[w(1-h) + 0.8 - c\bigr]
+\]
+
+\textbf{First-order conditions:}
+\begin{align*}
+    \frac{\partial \mathcal{L}}{\partial c} &= 1 - \lambda = 0
+        &&\Longrightarrow\; \lambda = 1 \\[4pt]
+    \frac{\partial \mathcal{L}}{\partial h} &= 0.8 - \lambda w = 0
+        &&\Longrightarrow\; w = 0.8
+\end{align*}
+
+The FOC pins down a specific wage ($w = 0.8$) rather than an interior choice
+of $(c,h)$; for any other wage there is no interior solution. The
+\textbf{second-order sufficient condition fails} because $u$ is linear ---
+all second derivatives of the Lagrangian are identically zero, so the Hessian
+is zero and we cannot confirm a strict interior maximum.
+
+%% ----------------------------
+\subsection*{Part (b) --- Dan's Labor Supply Curve}
+%% ----------------------------
+
+Since $u$ is linear, Dan compares his $MRS_{h,c} = 0.8$ to the wage $w$:
+
+\begin{itemize}[leftmargin=*]
+    \item If $w > 0.8$: leisure is ``too expensive''; Dan works all available
+    time: $1-h = 1$.
+    \item If $w = 0.8$: Dan is exactly indifferent; any $1-h \in [0,1]$ is
+    optimal.
+    \item If $w < 0.8$: leisure is relatively cheap; Dan takes all leisure:
+    $1-h = 0$.
+\end{itemize}
+
+Dan's labor supply curve is a step function: zero hours for $w < 0.8$, the
+full time endowment for $w > 0.8$, and any quantity in between at $w = 0.8$.
+
+%% ----------------------------
+\subsection*{Part (c) --- Nate: $u(c,h) = \min\{c,\,5h\}$, $\pi = 0$}
+%% ----------------------------
+
+Nate's indifference curves are \textbf{L-shaped} (perfect complements) with
+kinks along the ray $c = 5h$.
+
+\textbf{Argument that the optimum satisfies $c = 5h$:}
+\begin{itemize}[leftmargin=*]
+    \item If $c > 5h$: then $u = 5h$. Nate could reduce $c$ without
+    reducing utility, saving income --- not optimal.
+    \item If $c < 5h$: then $u = c$. Nate could reduce $h$ (work more),
+    increase income and spend it on $c$, strictly raising utility ---
+    not optimal.
+\end{itemize}
+Therefore the optimum must lie at the kink: $c = 5h$.
+
+%% ----------------------------
+\subsection*{Part (d) --- Nate's Labor Supply Curve}
+%% ----------------------------
+
+At the optimum, $c = 5h$ and the budget constraint binds ($\pi = 0$):
+\[
+    5h = w(1-h)
+    \;\Longrightarrow\;
+    5h = w - wh
+    \;\Longrightarrow\;
+    h^*(5 + w) = w
+    \;\Longrightarrow\;
+    h^* = \frac{w}{5+w}
+\]
+\[
+    \boxed{1 - h^* = \frac{5}{5+w}}
+\]
+
+As $w$ increases, $5/(5+w)$ \textbf{decreases}, so Nate works \emph{less}
+as the wage rises. His labor supply is downward-sloping from the outset.
+
+\textbf{Income and substitution effects:} With perfect complements there is
+\textbf{no substitution effect} --- the kink in the indifference curve means
+relative price changes do not induce any reallocation along a given
+indifference curve. The \textbf{income effect} therefore dominates completely:
+a higher wage makes Nate richer, so he ``buys'' more leisure and supplies
+fewer hours of labor.
+
+%% ============================================================
+\section*{Problem 4 (8 points) --- Jane: $u(c,h) = \sqrt{c} + 4\sqrt{h}$}
+%% ============================================================
+
+Jane's budget constraint is $c \leq w(1-h) + \pi$.
+
+%% ----------------------------
+\subsection*{Part (a) --- $w = 20$, $\pi = 5$}
+%% ----------------------------
+
+\textbf{Interior optimality condition} ($MRS_{h,c} = w$):
+\[
+    MRS_{h,c}
+        = \frac{MU_h}{MU_c}
+        = \frac{2/\sqrt{h}}{1/(2\sqrt{c})}
+        = \frac{4\sqrt{c}}{\sqrt{h}}
+        = 20
+    \;\Longrightarrow\;
+    \sqrt{c} = 5\sqrt{h}
+    \;\Longrightarrow\;
+    c = 25h
+\]
+
+\textbf{Budget constraint (binding):}
+\[
+    c = 20(1-h) + 5 = 25 - 20h
+\]
+
+Substituting $c = 25h$:
+\[
+    25h = 25 - 20h
+    \;\Longrightarrow\;
+    45h = 25
+    \;\Longrightarrow\;
+    h^* = \frac{5}{9}
+\]
+\[
+    \boxed{1 - h^* = \frac{4}{9} \approx 0.444,
+    \qquad c^* = \frac{125}{9} \approx 13.89}
+\]
+
+%% ----------------------------
+\subsection*{Part (b) --- Labor Supply Curve (general $w$, $\pi = 5$)}
+%% ----------------------------
+
+From the optimality condition $MRS_{h,c} = w$:
+\[
+    \frac{4\sqrt{c}}{\sqrt{h}} = w
+    \;\Longrightarrow\;
+    c = \frac{w^2}{16}\,h
+\]
+
+Substituting into the binding budget constraint $c = w(1-h) + 5$:
+\[
+    \frac{w^2}{16}\,h + wh = w + 5
+    \;\Longrightarrow\;
+    h\cdot\frac{w(w+16)}{16} = w + 5
+    \;\Longrightarrow\;
+    h^* = \frac{16(w+5)}{w(w+16)}
+\]
+
+\[
+    \boxed{1 - h^* = \frac{w^2 - 80}{w(w+16)}}
+\]
+
+Jane supplies positive hours only when $w^2 > 80$, i.e., $w > 4\sqrt{5} \approx 8.94$.
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Wage $w$ & Hours worked $1-h^*$ \\
+\midrule
+10 & $20/260 \approx 0.077$ \\
+12 & $64/336 \approx 0.190$ \\
+16 & $176/512 \approx 0.344$ \\
+20 & $320/720 \approx 0.444$ \\
+24 & $496/960 \approx 0.517$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The labor supply curve is \textbf{upward-sloping}: the substitution effect
+(higher wages make work more attractive relative to leisure) dominates the
+income effect for this utility function.
+
+%% ----------------------------
+\subsection*{Part (c) --- Effect of Higher Non-Wage Income $\pi$}
+%% ----------------------------
+
+Repeating the derivation for general $\pi$, the labor supply becomes:
+\[
+    1 - h^* = \frac{w^2 - 16\pi}{w(w+16)}
+\]
+
+An increase in $\pi$ \textbf{reduces} $1-h^*$: Jane supplies fewer hours at
+every wage level. This is a \textbf{pure income effect} --- with no change in
+the wage, there is no substitution effect, and the higher non-wage income
+allows Jane to afford more leisure. The labor supply curve \textbf{shifts
+inward (left)}: Jane works less at every wage.
+
+\end{document}
